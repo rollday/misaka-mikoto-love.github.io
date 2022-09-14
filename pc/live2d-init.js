@@ -18,7 +18,7 @@ const initLive2d = () => {
     mode: 'fixed',
     hidden: false,
     content: {
-      link: ['https://github.com/misaka-fans/misaka-fans.github.io'],
+      link: ['../make/make.html'],
       skin: ['要换成我的朋友吗？', '让她放个假吧~'],
       hidden: true,
       custom: [],
