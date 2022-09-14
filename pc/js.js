@@ -22,14 +22,15 @@ document.oncontextmenu = function()
 {
 	return false;
 };
+
 var _hmt = _hmt || [];
-(function()
-{
-	var hm = document.createElement("script");
-	hm.src = "https://hm.baidu.com/hm.js?702abe6800260c6c391eacf25f0e5059";
-	var s = document.getElementsByTagName("script")[0];
-	s.parentNode.insertBefore(hm, s);
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?60297d1229e157e97320df253bf06e97";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
 })();
+
 
 window.onload = function()
 {
