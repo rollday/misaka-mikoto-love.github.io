@@ -39,7 +39,7 @@ body {
 	height:50px;
 	display:flex;
 	align-items:center;
-	background-color:#FF91BD;
+	background-color:#FF9999;
 	z-index:8;
 }
 *,::after,::before {
