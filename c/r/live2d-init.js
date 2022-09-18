@@ -18,7 +18,7 @@ const initLive2d = () => {
     mode: 'fixed',
     hidden: false,
     content: {
-      link: ['../make/make.html'],
+      link: ['make.html'],
       skin: ['要换成我的朋友吗？', '让她放个假吧~'],
       hidden: true,
       custom: [],
