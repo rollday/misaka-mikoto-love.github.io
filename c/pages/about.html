@@ -1,9 +1,7 @@
 <!doctype html>
 <html>
-  
-  <head>
-    
-    <script>
+<head>
+<script>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -12,58 +10,110 @@
       s.parentNode.insertBefore(hm, s);
     })();
     </script>
-    <meta charset="utf-8">
-    <meta name="msvalidate.01" content="AFAC2044429F0EB9C34E9C53A6ED89F3" />
-    <meta http-equiv="X-UA-Compatible"
+<meta charset="utf-8">
+<meta name="msvalidate.01" content="AFAC2044429F0EB9C34E9C53A6ED89F3" />
+<meta http-equiv="X-UA-Compatible"
                   content="IE=edge">
-    <meta name="viewport"
+<meta name="viewport"
                   content="width=device-width, initial-scale=1.0">
-    <title>misaka-mikoto 御坂美琴_关于美琴</title>
-    <link rel="icon"
+<title>misaka-mikoto 御坂美琴_关于美琴</title>
+<link rel="icon"
                   type="image/x-icon"
                   href="../r/img/2.jpeg">
-    <style type="text/css"></style>
-    <link href="../r/main.css"
+<style type="text/css">
+#main {
+    font-size: 3em;
+    padding-top: 100px;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(0,0,0,.2);
+}
+</style>
+<link href="../r/main.css"
                   rel="stylesheet"
                   type="text/css">
-    <script src="../r/main.js"></script>
-    
-  </head>
-  
-  <body>
-    <header class="header" style="background-color:#F4D1D7">
+<script src="../r/main.js"></script>
+</head>
+
+<body>
+<header class="header" style="background-color:#F4D1D7">
         <button class="sidebar-toggler icon-btn material-symbols-outlined">菜单</button>
         <h1>爱我超电磁炮</h1>
-    </header>
-<table width="99%" align="center">
+</header>
+<table width="100%" align="center">
         <tbody>
                 <tr>
-                        <td width="25%"><p>源码作者 @misaka-fans</p>&nbsp;</td>
+                        <td width="25%"><p>源码作者 @misaka-fans</p>
+                                &nbsp;</td>
                         <td width="25%"><img src="https://avatars.githubusercontent.com/u/104608787?v=4" width="100px" hight="100px">&nbsp;</td>
-                        <td width="25%"><p>建议：@谢 bro （doge</p>&nbsp;</td>
+                        <td width="25%"><p>建议：@谢 bro （doge</p>
+                                &nbsp;</td>
                         <td width="25%">&nbsp;</td>
                 </tr>
                 <tr>
-                        <td><p><a href="https://github.com/misaka-fans" target="_blank">GitHub</a></p>&nbsp;</td>
+                        <td><p><a href="https://github.com/misaka-fans" target="_blank">GitHub</a></p>
+                                &nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                 </tr>
                 <tr>
-                        <td><p>二次编写 @misaka-mikoto-love</p>&nbsp;</td>
+                        <td><p>二次编写 @misaka-mikoto-love</p>
+                                &nbsp;</td>
                         <td><img src="https://avatars.githubusercontent.com/u/113221030?s=400&u=87a810d6aa3ee3275f2e246b4167284262fe7c05&v=4" width="100px" hight="100px">&nbsp;</td>
-                        <td><p>诚邀各路大佬~</p>&nbsp;</td>
-                        <td><p>资源投稿：z3551978100@outlook.com</p>&nbsp;</td>
+                        <td><p>诚邀各路大佬~</p>
+                                &nbsp;</td>
+                        <td><p>资源投稿：z3551978100@outlook.com</p>
+                                &nbsp;</td>
                 </tr>
                 <tr>
-                        <td><p><a href="https://github.com/misaka-mikoto-love" target="_blank">GitHub</a></p>&nbsp;</td>
+                        <td><p><a href="https://github.com/misaka-mikoto-love" target="_blank">GitHub</a></p>
+                                &nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                 </tr>
         </tbody>
 </table>
-
-      </body>
-
+<p id="main">此网站已创立<span></span> </p>
+<script type="text/javascript">
+function toDouble(num) {
+  num >= 10 ? num = '' + num : num = '0' + num;
+  return num;
+}
+var main = $$('main'),
+  span = $$('main').getElementsByTagName('span')[0];
+ 
+function timer(year, month, day, hour, minute, seconds, elem) {
+  var hour = hour || 0,
+    minute = minute || 0,
+    seconds = seconds || 0;
+  var endTime = new Date();
+ 
+  endTime.setFullYear(parseInt(year)),
+  endTime.setMonth(parseInt(month) - 1),
+  endTime.setDate(parseInt(day)),
+  endTime.setHours(parseInt(hour)),
+  endTime.setMinutes(parseInt(minute)),
+  endTime.setSeconds(parseInt(seconds));
+  setTime();
+  setInterval(function() {
+    setTime()
+  }, 1000);
+  function setTime() {
+    var startTime = new Date();
+    var lengthTime = parseInt((startTime.getTime() - endTime.getTime()) / 1000);
+    var lSeconds = parseInt(lengthTime % 60),
+      lMinute = parseInt((lengthTime / 60) % 60),
+      lHour = Math.floor((lengthTime / 3600) % 24),
+      lDay = Math.floor(lengthTime / (24 * 3600));
+    span.innerHTML=lDay+'天'+toDouble(lHour)+'小时'+toDouble(lMinute)+'分钟'+toDouble(lSeconds)+'秒';
+  }
+ 
+}
+function $$(id) {
+  return document.getElementById(id);
+}
+timer(2022, 08, 02, 0, 0, 0, span);
+</script>
+</body>
 </html>
