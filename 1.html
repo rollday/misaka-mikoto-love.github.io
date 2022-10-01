@@ -1,33 +1,31 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-<script type="text/javascript">
-function startTime()
-{
-	var today=new Date()
-	var y=today.getFullYear()-2022
-	var mon=today.getMonth()+1-8
-	var d=today.getDate()-2
-	var hour=today.getHours()
-	var min=today.getMinutes()
-	var sec=today.getSeconds()
-	var weeks = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
-	var w= weeks[today.getDay()]
-	min=checkTime(min)
-	sec=checkTime(sec)
-	document.getElementById('txt').innerHTML=y+" 年 "+mon+" 月 "+d+" 日  "+hour+"小时"+min+"分钟"+sec+"秒"
-	t=setTimeout('startTime()',500)
-}
-
-function checkTime(i)
-{
-	if (i<10)
-	{i="0" + i}
-	return i
-}
-</script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="c/r/main.css" rel="stylesheet" type="text/css">
 </head>
-<body onload="startTime()">
-<div id="txt"></div>
+
+<body>
+<header style="background-color:#F4D1D7;height: 64px">
+        <input type="checkbox" id="check">
+        <label for="check"> <i class="fa fa-bars" id="btn">菜单</i> <i class="fa fa-times" id="cancel">←</i> </label>
+        <div class="sidebar">
+                <div class="top">Hi~</div>
+                <ul>
+                        <li><a href="./c/pages/about-railgun.html">御坂美琴</a></li>
+                        <li><a href="./c/pages/about.html">关于我们</a></li>
+                        <li><a href="./c/pages/need-help.html">招贤纳士</a></li>
+                </ul>
+        </div>
+        <h1 class="ph">爱我超电磁炮</h1>
+</header>
+<div>
+        <p> 君の指先を舞ってる電光は、私の一生変わらない信仰であり、このレールガンだけが永遠！ </p>
+</div>
+
 </body>
+<script src="c/r/main.js"></script>
 </html>
