@@ -17,11 +17,11 @@ body {
         background-color: #FFFFFF
 }
 body p {
-        font-size: 120%;
-        color: #F4D1D7;
-        font-size: 1.75em;
-        font-weight: 100;
-        letter-spacing: 0.5em;
+    font-size: 120%;
+    color: #F4D1D7;
+    font-size: 0.5em
+    font-weight: 100;
+    letter-spacing: 0.5em;
 }
 * {
         padding: 0;
@@ -162,4 +162,3 @@ i {
 border-top: 1px solid #ccc;
 border-bottom: 1px solid #ccc;
 border-right: 1px solid #ccc} 
-
