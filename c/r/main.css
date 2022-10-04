@@ -17,11 +17,10 @@ body {
         background-color: #FFFFFF
 }
 body p {
-    font-size: 120%;
-    color: #F4D1D7;
-    font-size: 1.5em;
-    font-weight: 100;
-    letter-spacing: 0.5em;
+        color: #F4D1D7;
+        font-size: 1.25em;
+        font-weight: 100;
+        letter-spacing: 0.5em;
 }
 * {
         padding: 0;
@@ -148,6 +147,7 @@ i {
         font-family: 'ZCOOL KuaiLe', cursive;
         font-family: 'Zen Maru Gothic', sans-serif;
         box-shadow: 2px 4px 6px #BFBFBF;
+        width: 100%
 }
 .table-about {
         position: absolute;
@@ -158,7 +158,9 @@ i {
         padding-top: 1000px;
         text-align: center;
 }
-.a-san{border-left: 1px solid #ccc;
-border-top: 1px solid #ccc;
-border-bottom: 1px solid #ccc;
-border-right: 1px solid #ccc} 
+.a-san {
+        border-left: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-right: 1px solid #ccc
+}
