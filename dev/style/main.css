@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Zen+Maru+Gothic&display=swap');
+html {
+        font-family: 'ZCOOL KuaiLe', cursive;
+}
+a {
+        text-decoration: none;
+        color: #F4D1D7
+}
+a:focus {
+        outline: thin dotted;
+}
+a:active, a:hover {
+        outline: 0;
+}
+body {
+        background-color: #FFFFFF
+}
+body p {
+        color: #F4D1D7;
+        font-size: 1.25em;
+        font-weight: 100;
+        letter-spacing: 0.5em;
+}
+* {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-decoration: none;
+}
+.sidebar {
+        position: fixed;
+        left: -200px;
+        width: 200px;
+        height: 100%;
+        background: #FFFFFF;
+        transition: all .5s ease;
+}
+.sidebar .top {
+        font-size: 22px;
+        color: #FFFFFF;
+        text-align: center;
+        height: 64px;
+        line-height: 60px;
+        background-color: #F4D1D7;
+        user-select: none;
+        box-shadow: 2px 4px 6px #BFBFBF;
+}
+.sidebar ul a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        line-height: 45px;
+        font-size: 18px;
+        color: #F4D1D7;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        border-bottom: 1px;
+        transition: .4s;
+}
+ul li:hover a {
+        padding-left: 30px;
+        color: #F4D1D7;
+        border-left: 5px solid #F4D1D7;
+        transition: all 0.5s;
+}
+.sidebar ul a i {
+        margin-right: 0px;
+}
+#check {
+        display: none;
+}
+label #btn, label #cancel {
+        position: fixed;
+        cursor: pointer;
+        background-color: #F4D1D7;
+        border-radius: 3px;
+}
+label #btn {
+        left: 5px;
+        top: 7px;
+        font-size: 25px;
+        color: #fff;
+        padding: 6px 10px;
+        transition: all .5s;
+}
+label #cancel {
+        z-index: 1;
+        left: -145px;
+        top: 10px;
+        font-size: 25px;
+        color: #FFFFFF;
+        padding: 4px 9px;
+        transition: all .5s ease;
+}
+#check:checked ~ .sidebar {
+        left: 0;
+}
+#check:checked ~ label #btn {
+        left: 10px;
+        opacity: 0;
+        pointer-events: none;
+}
+#check:checked ~ label #cancel {
+        left: 150px;
+}
+.content {
+        background: url("img/1.jpg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        transition: all .5s;
+        display: flex;
+        justify-content: space-around;
+}
+#check:checked ~ .content {
+        margin-left: 200px;
+}
+.item {
+        width: 30%;
+        height: 300px;
+        background-color: deepskyblue;
+}
+i {
+        font-style: normal;
+}
+.header {
+        position: fixed;
+        height: 6rem;
+        width: 100%;
+        right: 0;
+        top: 0;
+        z-index: 999;
+        background-color: white;
+        box-shadow: 2px 4px 6px #BFBFBF;
+}
+.header #ph {
+        font-weight: 100;
+        color: #ffffff;
+        text-align: center;
+        padding-top: 16px;
+}
+#div-p {
+        position: absolute;
+        top: 64px;
+        font-family: 'ZCOOL KuaiLe', cursive;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        box-shadow: 2px 4px 6px #BFBFBF;
+        width: 100%
+}
+.table-about {
+        position: absolute;
+        top: 64px;
+}
+#main {
+        font-size: 3em;
+        padding-top: 1000px;
+        text-align: center;
+}
+.a-san {
+        border-left: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-right: 1px solid #ccc
+}
