@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+<meta name="keywords" content="美琴，御坂美琴，misaka，mikoto，misaka mikoto，misaka-mikoto，炮姐，超电磁炮">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?60297d1229e157e97320df253bf06e97";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta charset="utf-8">
+<meta name="msvalidate.01" content="AFAC2044429F0EB9C34E9C53A6ED89F3" />
+<meta name="baidu-site-verification" content="code-qgFG5UwLMb" />
+<meta http-equiv="X-UA-Compatible"
+			  content="IE=edge">
+<meta name="viewport"
+			  content="width=device-width, initial-scale=1.0">
+<title>misaka-mikoto 御坂美琴</title>
+<link rel="icon"
+			  type="image/x-icon"
+			  href="../r/img/title.jpeg">
+<style type="text/css"></style>
+<link href="../r/main.css"
+			  rel="stylesheet"
+			  type="text/css">
+</head>
+
+<body>
+<header class="header" style="background-color:#F4D1D7;height: 64px">
+        <input type="checkbox" id="check">
+        <label for="check"> <i class="fa fa-bars" id="btn"><img src="../r/img/menu.png" width="32px" hight="32px" alt="菜单"></i><i class="fa fa-times" id="cancel">↩</i> </label>
+        <div class="sidebar">
+                <div class="top">Hi~</div>
+                <ul>
+                        <li><a href="../../">主页</a></li>
+                        <li><a href="about-railgun.html">御坂美琴</a></li>
+                        <li><a href="links.html">友情链接</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="need-help.html">招贤纳士</a></li>
+                </ul>
+        </div>
+        <h1 id="ph">爱我超电磁炮</h1>
+</header>
+
+
+    <div class="a-san table-about">三边有边框，其它一边没有边框</div>
+<p id="main">此网站已创立<span></span> </p>
+<script type="text/javascript">
+function toDouble(num) {
+  num >= 10 ? num = '' + num : num = '0' + num;
+  return num;
+}
+var main = $$('main'),
+  span = $$('main').getElementsByTagName('span')[0];
+ 
+function timer(year, month, day, hour, minute, seconds, elem) {
+  var hour = hour || 0,
+    minute = minute || 0,
+    seconds = seconds || 0;
+  var endTime = new Date();
+ 
+  endTime.setFullYear(parseInt(year)),
+  endTime.setMonth(parseInt(month) - 1),
+  endTime.setDate(parseInt(day)),
+  endTime.setHours(parseInt(hour)),
+  endTime.setMinutes(parseInt(minute)),
+  endTime.setSeconds(parseInt(seconds));
+  setTime();
+  setInterval(function() {
+    setTime()
+  }, 1000);
+  function setTime() {
+    var startTime = new Date();
+    var lengthTime = parseInt((startTime.getTime() - endTime.getTime()) / 1000);
+    var lSeconds = parseInt(lengthTime % 60),
+      lMinute = parseInt((lengthTime / 60) % 60),
+      lHour = Math.floor((lengthTime / 3600) % 24),
+      lDay = Math.floor(lengthTime / (24 * 3600));
+    span.innerHTML=lDay+'天'+toDouble(lHour)+'小时'+toDouble(lMinute)+'分钟'+toDouble(lSeconds)+'秒';
+  }
+ 
+}
+function $$(id) {
+  return document.getElementById(id);
+}
+timer(2022, 08, 02, 0, 0, 0, span);
+</script>
+</body>
+</html>
