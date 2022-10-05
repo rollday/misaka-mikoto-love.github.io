@@ -5,11 +5,28 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>无标题文档</title>
+<!-- CSS -->
+<link href="https://unpkg.com/artalk@2.4.2/dist/Artalk.css" rel="stylesheet">
+
+<!-- JS -->
+<script src="https://unpkg.com/artalk@2.4.2/dist/Artalk.js"></script>
+
+
 
 
 </head>
 
 <body>
-
+<!-- Artalk -->
+<div id="Comments"></div>
+<script>
+  new Artalk({
+    el:        '#Comments',              // 绑定元素的 Selector
+    pageKey:   '233',                // 固定链接 (留空自动获取)
+    pageTitle: '', // 页面标题 (留空自动获取)
+    server:    'https://chat.mashiro.pub:23366',  // 后端地址
+    site:      'lolimashiro-comment-sys',           // 你的站点名
+  })
+</script>
 </body>
 </html>
