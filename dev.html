@@ -22,9 +22,45 @@ var _hmt = _hmt || [];
 <title>⌈misaka-mikoto 御坂美琴⌋</title>
 <script src="./JavaScript/jquery-3.4.1.min.js"></script>
 <link href="style/another.css" rel="stylesheet" type="text/css">
+<style>
+/*定义加载动画load*/
+@-webkit-keyframes load {
+0%, 40%, 100% {
+-webkit-transform: scaleY(0.4);
+transform: scaleY(0.4);
+}
+20% {
+-webkit-transform: scaleY(1);
+transform: scaleY(1);
+}
+}
+@keyframes load {
+0%, 40%, 100% {
+-webkit-transform: scaleY(0.4);
+transform: scaleY(0.4);
+}
+20% {
+-webkit-transform: scaleY(1);
+transform: scaleY(1);
+}
+}
+            /*完了以后不要忘记兼容性问题，复制CSS样式代码，打开一个网址（http://autoprefixer.github.io/）粘贴到左边的框里，右边会生成兼容性代码，然后复制，替换原来的CSS样式代码粘贴。*/
+</style>
 </head>
 
 <body>
+<!-- 遮挡页面 -->
+<div class="loading">
+  <div class="pic"> <i></i> <i></i> <i></i> <i></i> <i></i> </div>
+</div>
+<script type="text/javascript" src="./JavaScript/jquery-3.4.1.min.js"></script> 
+<script>
+            document.onreadystatechange = function(){
+                if(document.readyState == "complete"){
+                    $(".loading").fadeOut();
+                }
+            }
+        </script>
 <input type="checkbox" id="check">
 <div class="userWrap">
   <div class="sidebar">
