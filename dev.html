@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+<meta name="keywords" content="美琴，御坂美琴，misaka，mikoto，misaka mikoto，misaka-mikoto，炮姐，超电磁炮">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?60297d1229e157e97320df253bf06e97";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script> 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<meta charset="utf-8">
+<meta name="msvalidate.01" content="AFAC2044429F0EB9C34E9C53A6ED89F3" />
+<meta name="baidu-site-verification" content="code-qgFG5UwLMb" />
+<meta http-equiv="X-UA-Compatible"
+			  content="IE=edge">
+<meta name="viewport"
+			  content="width=device-width, initial-scale=1.0">
+<title>⌈misaka-mikoto 御坂美琴⌋</title>
+<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<link href="style/another.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<input type="checkbox" id="check">
+<div class="userWrap">
+  <div class="sidebar">
+    <div class="top">Hi~</div>
+    <ul class="userMenu">
+      <li class="current" data-id="center"><a>主 页</a></li>
+      <li data-id="about-railgun"><a>关 于 美 琴</a></li>
+      <li data-id="artalk"><a>留 言 板</a></li>
+      <li data-id="links"><a>友 情 链 接</a></li>
+      <li data-id="about"><a>关 于 我 们</a></li>
+      <li data-id="need-help"><a>招 贤 纳 士</a></li>
+    </ul>
+  </div>
+  <div id="content" style=""></div>
+</div>
+</body>
+<script>
+  $(function() {
+    $(".userWrap").on("click", "li", function() {
+      var sId = $(this).data("id"); //获取data-id的值
+      window.location.hash = sId; //设置锚点
+      loadInner(sId);
+    });
+
+    function loadInner(sId) {
+      var sId = window.location.hash;
+      var pathn, i;
+      switch (sId) {
+        case "#center":
+          pathn = "./pages/single-page/s-index.html";
+          i = 0;
+          break;
+        case "#about-railgun":
+          pathn = "./pages/single-page/about-railgun.html";
+          i = 1;
+          break;
+        case "#links":
+          pathn = "./pages/single-page/links.html";
+          i = 2;
+          break;
+        case "#about":
+          pathn = "./pages/single-page/about.html";
+          i = 3;
+          break;
+		case "#need-help":
+          pathn = "./pages/single-page/need-help.html";
+          i = 4;
+          break;
+		case "#artalk":
+          pathn = "./pages/single-page/artalk.html";
+          i = 5;
+          break;
+        default:
+          pathn = "./pages/single-page/s-index.html";
+          i = 0;
+          break;
+      }
+      $("#content").load(pathn); //加载相对应的内容
+      $(".userMenu li").eq(i).addClass("current").siblings().removeClass("current"); //当前列表高亮
+    }
+    var sId = window.location.hash;
+    loadInner(sId);
+  });
+</script>
+</html>
