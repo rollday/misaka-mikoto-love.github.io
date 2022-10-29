@@ -18,7 +18,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>⌈misaka-mikoto御坂美琴⌋</title>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script> 
+<script src="JavaScript/main.js"></script>
 <style type="text/css" >
 * {
     padding: 0;
@@ -28,12 +29,12 @@ a:active, a:hover {
     outline: 0;
 }
 body {
-    background-color: #FFFFFF;
+    background-color: #ffFFFF;
     height: 200px;
 }
 body p {
-    color: rgba(146, 172, 209, 1.00);
-    font-size: 1.25em;
+    color: #0099CC;
+    font-size: 1.1em;
     font-weight: 100;
     letter-spacing: 0.5em;
 }
@@ -61,8 +62,8 @@ body p {
     height: 100%;
     width: 100%;
     text-align: left;
-    line-height: 45px;
-    font-size: 18px;
+    line-height: 2em;
+    font-size: 1.25em;
     color: #fb7299;
 }
 ul li:hover a {
@@ -98,8 +99,45 @@ i {
 #did {
     box-shadow: 2px 4px 6px #BFBFBF;
 }
+@keyframes scroll {
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translate(calc(+100% - 10 * 15em));
+}
+}
+.marquee {
+    position: relative;
+    margin: auto;
+    height: 12.5em;
+    overflow: hidden;
+}
+.marquee ul {
+    position: absolute;
+    display: flex;
+    height: 12.5em;
+    left: 0;
+    animation: 10s infinite linear scroll;
+}
+.marquee ul li {
+    float: left;
+    list-style: none;
+    width: 12.5em;
+    height: 12.5em;
+}
+.marquee ul li img {
+    width: inherit;
+    height: inherit;
+}
 </style>
 <link rel="icon" type="image/x-icon" href="image/title.jpeg">
+<link rel="prefetch" href="http://101.43.191.41/dev.html">
+<link rel="prefetch" href="http://101.43.191.41">
+<link rel="prefetch" href="https://misaka-mikoto-love.github.io/">
+<link rel="prefetch" href="https://github.com">
+<link rel="prefetch" href="https://github.com/roll-day">
+<link rel="prefetch" href="https://github.com/misaka-mikoto-love">
 <link href="./live2d/static/pio.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -109,19 +147,32 @@ i {
   <div class="sidebar">
     <div class="top">Hi~</div>
     <ul class="userMenu">
-      <li class="current" data-id="center"><a>主页</a></li>
-      <li data-id="about-railgun"><a>关 于 美 琴</a></li>
-      <li data-id="artalk"><a>留 言 板</a></li>
-      <li data-id="links"><a>友 情 链 接</a></li>
-      <li data-id="about"><a>关 于 我 们</a></li>
-      <li data-id="need-help"><a>招 贤 纳 士</a></li>
+      <li class="current" data-id="center"><a style="cursor:pointer">主 页</a></li>
+      <li data-id="about-railgun"><a style="cursor:pointer">关 于 美 琴</a></li>
+      <li data-id="artalk"><a style="cursor:pointer">留 言 板</a></li>
+      <li data-id="links"><a style="cursor:pointer">友 情 链 接</a></li>
+      <li data-id="about"><a style="cursor:pointer">关 于 我 们</a></li>
+      <li data-id="need-help"><a style="cursor:pointer">招 贤 纳 士</a></li>
+      <li>
+        <div style="width: 40%">
+          <div> <a href="https://github.com/misaka-mikoto-love/misaka-mikoto-love.github.io" title="前往仓库" target="_blank">
+            <div class="md-source__icon md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24">
+                <path fill-rule="evenodd"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"> </path>
+              </svg>
+				
+            </div>
+            </a> </div>
+        </div>
+      </li>
     </ul>
   </div>
   <div id="content" style=""></div>
 </div>
 <div class="pio-container right">
   <div class="pio-action"></div>
-  <canvas id="pio" width="200" height="250"></canvas>
+  <canvas id="pio" width="240" height="320"></canvas>
 </div>
 </body>
 <script>
@@ -144,22 +195,23 @@ i {
           pathn = "./pages/single-page/about-railgun.html";
           i = 1;
           break;
+		case "#artalk":
+          pathn = "./pages/single-page/artalk.html";
+          i = 2;
+          break;
         case "#links":
           pathn = "./pages/single-page/links.html";
-          i = 2;
+          i = 3;
           break;
         case "#about":
           pathn = "./pages/single-page/about.html";
-          i = 3;
+          i = 4;
           break;
         case "#need-help":
           pathn = "./pages/single-page/need-help.html";
-          i = 4;
-          break;
-        case "#artalk":
-          pathn = "./pages/single-page/artalk.html";
           i = 5;
           break;
+        
         default:
           pathn = "./pages/single-page/s-index.html";
           i = 0;
