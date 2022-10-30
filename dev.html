@@ -131,13 +131,11 @@ transform: translate(calc(+100% - 10 * 15em));
     height: inherit;
 }
 </style>
-<link rel="icon" type="image/x-icon" href="image/title.jpeg">
-<link rel="prefetch" href="http://101.43.191.41/dev.html">
-<link rel="prefetch" href="http://101.43.191.41">
-<link rel="prefetch" href="https://misaka-mikoto-love.github.io/">
-<link rel="prefetch" href="https://github.com">
-<link rel="prefetch" href="https://github.com/roll-day">
-<link rel="prefetch" href="https://github.com/misaka-mikoto-love">
+<link rel="icon" type="image/x-icon" href="https://image-1309525160.cos.ap-beijing.myqcloud.com/image/title.jpeg">
+<link rel="prefetch" href="./live2d/mikoto/mikoto.model.json">
+<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fl2d.js"></script>
+<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fpio.js"></script>
+<link rel="prefetch" href="./live2d/mikoto/mikoto.model.json">
 <link href="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fpio.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -224,15 +222,11 @@ transform: translate(calc(+100% - 10 * 15em));
     loadInner(sId)
   });
 </script>
-<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fl2d.js"></script>
-<!-- 引用看板娘交互组件 -->
-<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fpio.js"></script>
 <script>var pio = new Paul_Pio({
     "mode": "fixed",
     "hidden": true,
     "content": {
-        "welcome": ["欢迎来到这里！", "今天天气不错，一起来玩吧！", "哼哼~"],
-        
+    "welcome": ["欢迎来到这里！", "今天天气不错，一起来玩吧！", "哼哼~"],
     },
     "night": "single.night()",
     "model": ["./live2d/mikoto/mikoto.model.json"]
