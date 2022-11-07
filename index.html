@@ -21,8 +21,19 @@ var _hmt = _hmt || [];
 <link rel="icon" type="image/x-icon" href="image/title.jpeg">
 <style type="text/css"></style>
 <link href="style/main.css" rel="stylesheet" type="text/css">
-<link href="style/live2d.min.css" rel="stylesheet" type="text/css">
-<script src="JavaScript/live2d.min.js"></script>
+<link href="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fpio.css" rel="stylesheet" type="text/css">
+<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fl2d.js"></script> 
+<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fpio.js"></script> 
+<!--百度统计--> 
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60297d1229e157e97320df253bf06e97";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s)
+    })();
+</script> 
 </head>
 
 <body>
@@ -37,6 +48,7 @@ var _hmt = _hmt || [];
       <li><a href="pages/links.html">友情链接</a></li>
       <li><a href="pages/about.html">关于我们</a></li>
       <li><a href="pages/need-help.html">招贤纳士</a></li>
+	  <li><a href="dev.html">单页面应用实验室</a></li>
     </ul>
   </div>
   <h1 id="ph">⌈爱我超电磁炮⌋</h1>
@@ -59,6 +71,18 @@ if(sessionStorage.pagecount){
     <p>本站总访问量<span id="busuanzi_value_site_pv"></span>次</p>
   </div>
 </div>
+<div class="pio-container right">
+  <div class="pio-action"></div>
+  <canvas id="pio" width="240" height="320"></canvas>
+</div>
 </body>
-<script src="JavaScript/live2d-init.js"></script>
+<script>var pio = new Paul_Pio({
+    "mode": "fixed",
+    "hidden": true,
+    "content": {
+    "welcome": ["欢迎来到这里！", "今天天气不错，一起来玩吧！", "哼哼~"],
+    },
+    "night": "single.night()",
+    "model": ["./live2d/mikoto/mikoto.model.json"]
+});</script>
 </html>
