@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+
+<url>
+ <loc>https://misaka-mikoto-love.github.io/pages/about.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2022-11-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://misaka-mikoto-love.github.io/pages/about-railgun.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2022-11-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://misaka-mikoto-love.github.io/pages/links.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2022-11-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://misaka-mikoto-love.github.io/dev.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2022-11-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://misaka-mikoto-love.github.io/index.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2022-11-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://misaka-mikoto-love.github.io/pages/need-help.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2022-11-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://misaka-mikoto-love.github.io/</loc>
+ <priority>0.3</priority>
+ <lastmod>2022-11-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+</urlset>
