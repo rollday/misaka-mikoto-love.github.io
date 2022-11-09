@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: 'ZCOOL KuaiLe', cursive;
+}
+a:active, a:hover {
+  outline: 0;
+}
+body {
+  background-color: #FFFFFF;
+  height: 200px;
+}
+body p {
+  color: rgba(146, 172, 209, 1.00);
+  font-size: 1.25em;
+  font-weight: 100;
+  letter-spacing: 0.5em;
+}
+.sidebar {
+  position: fixed;
+  left: 0px;
+  width: 15%;
+  height: 100%;
+  background: #FFFFFF;
+  transition: all .5s ease;
+  box-shadow: 2px 4px 6px #BFBFBF;
+}
+.sidebar .top {
+  font-size: 4em;
+  color: #FFFFFF;
+  text-align: center;
+  height: 64px;
+  line-height: 60px;
+  background-color: #E18393;
+  user-select: none;
+  box-shadow: 2px 4px 6px #BFBFBF;
+}
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  line-height: 45px;
+  font-size: 18px;
+  color: #fb7299;
+}
+ul li:hover a {
+  padding-left: 30px;
+  color: aqua;
+  border-left: 5px solid #fb7299;
+  transition: all 0.5s;
+}
+#check {
+  display: none;
+}
+i {
+  font-style: normal;
+}
+.a-san {
+  border-radius: 60px;
+  width: 360px;
+  height: 200px;
+  border: #BABABA 1px solid;
+  margin: 20px 20px;
+}
+.userMenu {
+  left: 15%;
+  float: left;
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 4px 6px #BFBFBF;
+}
+#content {
+  position: absolute;
+  left: 15%;
+}
+#did {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  box-shadow: 2px 4px 6px #BFBFBF;
+}

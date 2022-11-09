@@ -2,26 +2,136 @@
 <html lang="zh-hans">
 <head>
 <meta name="keywords" content="美琴,御坂美琴,misaka,mikoto,misaka mikoto,misaka-mikoto,炮姐,超电磁炮">
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?60297d1229e157e97320df253bf06e97";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script> 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<meta name="theme-color" content="#E18393">
 <meta charset="utf-8">
+<!--百度/bing搜索引擎-->
 <meta name="msvalidate.01" content="AFAC2044429F0EB9C34E9C53A6ED89F3" />
 <meta name="baidu-site-verification" content="code-qgFG5UwLMb" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>⌈misaka-mikoto 御坂美琴⌋</title>
-<link rel="icon" type="image/x-icon" href="image/title.jpeg">
-<style type="text/css"></style>
-<link href="style/main.css" rel="stylesheet" type="text/css">
+<title>⌈misaka-mikoto御坂美琴⌋</title>
+<!--Google字体库/2套字体-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="https://image-1309525160.cos.ap-beijing.myqcloud.com/image/title.jpeg">
 <link href="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fpio.css" rel="stylesheet" type="text/css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Zen+Maru+Gothic&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+html {
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+a {
+    text-decoration: none;
+    color: #fb7299
+}
+a:active, a:hover {
+    outline: 0;
+}
+body {
+    background-color: #fff;
+}
+body p {
+    color: #3498db;
+    font-size: 1.5em;
+    font-weight: 100;
+    letter-spacing: 0.75em;
+}
+.btm {
+    background-color: rgba(252, 252, 252, 0.5)
+}
+.sidebar {
+    position: absolute;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background: #FFFFFF;
+    transition: all .5s ease;
+    box-shadow: 2px 4px 6px #BFBFBF;
+    z-index: 999;
+}
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 45px;
+    font-size: 18px;
+    color: #fb7299;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px;
+    transition: .4s;
+}
+ul li:hover a {
+    padding-left: 30px;
+    color: aqua;
+    border-left: 5px solid #fb7299;
+    transition: all 0.5s;
+}
+#check {
+    display: none;
+}
+label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background-color: #fb7299;
+    border-radius: 3px;
+}
+label #btn {
+    left: 8px;
+    top: 8px;
+    padding: 6px 10px;
+    z-index: 30;
+	font-size: 25px;
+    color: #FFFFFF;
+}
+label #cancel {
+    z-index: 1;
+    left: 8px;
+    top: 8px;
+    font-size: 25px;
+    color: #FFFFFF;
+    padding: 6px 10px;
+}
+#check:checked ~ .sidebar {
+    left: 0;
+}
+#check:checked ~ label #btn {
+    left: 8px;
+    display: none;
+}
+#check:checked ~ label #cancel {
+    left: 8px;
+}
+i {
+    font-style: normal;
+}
+.header {
+    box-shadow: 8px 8px 8px #BFBFBF;
+    background-color: #fb7299;
+    height: 64px;
+    width: 100%;
+}
+#h-h {
+    color: #fff;
+    text-align: center;
+    font-weight: 100;
+    line-height: 64px;
+    font-size: 3em;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+</style>
+<!--重要！！！ 单页面重要依赖库jquery！！！一定要在jquery加载完后在使用单页面--> 
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script> 
+<script sec="./JavaScript/main.js"
 <script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fl2d.js"></script> 
 <script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fpio.js"></script> 
 <!--百度统计--> 
@@ -34,49 +144,98 @@ var _hmt = _hmt || [];
       s.parentNode.insertBefore(hm, s)
     })();
 </script> 
+<!--单页面锚点--> 
+<script>
+  $(function() {
+    $(".sidebar").on("click", "li", function() {
+      var sId = $(this).data("id");
+      window.location.hash = sId;
+      loadInner(sId)
+    });
+
+    function loadInner(sId) {
+      var sId = window.location.hash;
+      var pathn, i;
+      switch (sId) {
+        case "#center":
+          pathn = "./pages/index.html";
+          i = 0;
+          break;
+        case "#about-railgun":
+          pathn = "./pages/about-railgun.html";
+          i = 1;
+          break;
+		case "#artalk":
+          pathn = "./pages/artalk.html";
+          i = 2;
+          break;
+        case "#links":
+          pathn = "./pages/links.html";
+          i = 3;
+          break;
+        case "#about":
+          pathn = "./pages/about.html";
+          i = 4;
+          break;
+        case "#blog":
+          pathn = "./pages/logs.html";
+          i = 5;
+          break;
+		case "#need-help":
+          pathn = "./pages/need-help.html";
+          i = 6;
+          break;
+        
+        default:
+          pathn = "./pages/index.html";
+          i = 0;
+          break
+      }
+      $("#content").load(pathn);
+      $(".userMenu li").eq(i).addClass("current").siblings().removeClass("current")
+    }
+    var sId = window.location.hash;
+    loadInner(sId)
+  });
+</script>
 </head>
 
 <body>
-<header class="header" style="background-color:#F4D1D7;height: 64px">
+<header class="header">
+  <h1 id="h-h">⌈爱我超电磁炮⌋</h1>
+</header>
+<div>
   <input type="checkbox" id="check">
-  <label for="check"> <i class="fa fa-bars" id="btn"><img src="image/menu.png" width="32px" hight="32px" alt="菜单"></i><i class="fa fa-times" id="cancel">↩</i> </label>
+  <label for="check"> <i id="btn"><ion-icon name="code-slash-outline"></ion-icon></i><i id="cancel"><ion-icon name="chevron-forward-outline"></ion-icon></i> </label>
   <div class="sidebar">
-    <div class="top">Hi~</div>
-    <ul>
-      <li><a href="index.html">主页</a></li>
-      <li><a href="pages/about-railgun.html">御坂美琴</a></li>
-      <li><a href="pages/links.html">友情链接</a></li>
-      <li><a href="pages/about.html">关于我们</a></li>
-      <li><a href="pages/need-help.html">招贤纳士</a></li>
-	  <li><a href="dev.html">单页面应用实验室</a></li>
+    <ul class="userMenu">
+      <li class="current" data-id="center"><a>主页</a></li>
+      <li data-id="about-railgun"><a>关于美琴</a></li>
+      <li data-id="artalk"><a>留言板</a></li>
+      <li data-id="links"><a>友情链接</a></li>
+      <li data-id="about"><a>关于我们</a></li>
+      <li data-id="blog"><a>公告栏</a></li>
+      <li data-id="need-help"><a>招贤纳士</a></li>
+	  <li><a href="dev.html">实验室</a></li>
+      <!--GitHub仓库-->
+      <li> <a href="https://github.com/misaka-mikoto-love/misaka-mikoto-love.github.io" title="前往仓库" target="_blank"> <ion-icon name="logo-github"></ion-icon></a> </li>
     </ul>
   </div>
-  <h1 id="ph">⌈爱我超电磁炮⌋</h1>
-</header>
-<div id="div-p" hight="84px">
-  <div>
-    <p> 君の指先を舞ってる電光は、私の一生変わらない信仰であり、このレールガンだけが永遠！ </p>
-  </div>
-  <div> 
-    <script type="text/javascript">
-
-if(sessionStorage.pagecount){
-	sessionStorage.pagecount=Number(sessionStorage.pagecount)+1;
-	}else{
-	sessionStorage.pagecount=1;
-	}
-	document.write("您已经访问了："+sessionStorage.pagecount+"次");
-	
-	</script>
-    <p>本站总访问量<span id="busuanzi_value_site_pv"></span>次</p>
-  </div>
 </div>
+<!--重要 单页面加载div-->
+<div id="content"></div>
+<!--网页看板娘-->
 <div class="pio-container right">
   <div class="pio-action"></div>
   <canvas id="pio" width="240" height="320"></canvas>
 </div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!--移动端尚未适配-->
 </body>
-<script>var pio = new Paul_Pio({
+<!--要在js和css加载完后引用-->
+<script>
+	var pio = new Paul_Pio({
     "mode": "fixed",
     "hidden": true,
     "content": {
@@ -85,4 +244,5 @@ if(sessionStorage.pagecount){
     "night": "single.night()",
     "model": ["./live2d/mikoto/mikoto.model.json"]
 });</script>
+<!--网页作者：roll-day-->
 </html>
