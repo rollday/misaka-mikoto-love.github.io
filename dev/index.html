@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>roll-day 的小屋</title>
+<style>
+body {
+    background-color: #e67e22
+}
+p {
+    color: #2980b9
+}
+.dd {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0px;
+}
+.d {
+    border-radius: 15px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    width: calc(100% - 20px);
+    position: relative;
+    top: 10px;
+    left: 10px
+}
+</style>
+<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fl2d.js"></script> 
+<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fpio.js"></script>
+<link href="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fpio.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="dd" style="left: 0px;background-color: #2980b9 ">
+  <div class="d">
+    <p style="font-size: 8em;line-height:5px;padding-left: 20px;padding-top: 20px">Hi~</p>
+    <p style="font-size: 3em ">你来了</p>
+  </div>
+</div>
+<div class="dd" style="right: 0px;background-color: #2ecc71 ">
+  <div class="d"><img src="R-C.jfif" alt="和泉纱雾" width="323px" height="200px" style="border-radius:15px;border: 1px solid #fff;" ><img src="Sagiri.gif" height="200px" alt=""><p>そ、そんな名前の人は知らない...<br>
+  那个，才不认识叫那个名字的人⋯⋯</p></div>
+</div>
+<div class="pio-container left" style="bottom: -30px">
+  <div class="pio-action"></div>
+  <canvas id="pio" width="250" height="500"></canvas>
+</div>
+</body>
+<script>
+	var pio = new Paul_Pio({
+    "mode": "fixed",
+    "hidden": true,
+    "content": {
+    "welcome": ["欢迎来到这里！", "今天天气不错，一起来玩吧！", "哼哼~"],
+    },
+    "night": "single.night()",
+    "model": ["./live2d/model.json"]
+});</script>
+</html>
