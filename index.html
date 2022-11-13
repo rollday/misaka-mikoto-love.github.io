@@ -1,26 +1,101 @@
 <!DOCTYPE html>
 <html lang="zh-hans">
 <head>
+<!--页面属性-->
+<title>⌈misaka-mikoto御坂美琴⌋</title>
+<link rel="icon" type="image/x-icon" href="https://image-1309525160.cos.ap-beijing.myqcloud.com/image/title.jpeg">
 <meta name="keywords" content="美琴,御坂美琴,misaka,mikoto,misaka mikoto,misaka-mikoto,炮姐,超电磁炮">
 <meta name="theme-color" content="#E18393">
 <meta charset="utf-8">
 <!--百度/bing搜索引擎-->
 <meta name="msvalidate.01" content="AFAC2044429F0EB9C34E9C53A6ED89F3" />
 <meta name="baidu-site-verification" content="code-qgFG5UwLMb" />
+<!---->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<title>⌈misaka-mikoto御坂美琴⌋</title>
+<!--统计--> 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> 
 <!--Google字体库/2套字体-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="https://image-1309525160.cos.ap-beijing.myqcloud.com/image/title.jpeg">
-<link href="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fpio.css" rel="stylesheet" type="text/css">
+<!--重要！！！ Ajax重要依赖库jquery！！！一定要在jquery加载完后再使用单页面--> 
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script> 
+<!--看板娘--> 
+<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d/static/l2d.js"></script> 
+<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d/static/pio.js"></script>
+<link href="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d/static/pio.css" rel="stylesheet" type="text/css">
+<!--百度统计--> 
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60297d1229e157e97320df253bf06e97";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s)
+    })();
+</script> 
+<!--单页面锚点--> 
+<script>
+  $(function() {
+    $(".sidebar").on("click", "li", function() {
+      var sId = $(this).data("id");
+      window.location.hash = sId;
+      loadInner(sId)
+    });
+
+    function loadInner(sId) {
+      var sId = window.location.hash;
+      var pathn, i;
+      switch (sId) {
+        case "#center":
+          pathn = "./pages/index.html";
+          i = 0;
+          break;
+        case "#about-railgun":
+          pathn = "./pages/about-railgun.html";
+          i = 1;
+          break;
+		case "#photos":
+          pathn = "./pages/photos.html";
+          i = 2;
+          break;
+		case "#artalk":
+          pathn = "./pages/artalk.html";
+          i = 3;
+          break;
+        case "#links":
+          pathn = "./pages/links.html";
+          i = 4;
+          break;
+        case "#about":
+          pathn = "./pages/about.html";
+          i = 5;
+          break;
+        case "#blog":
+          pathn = "./pages/logs.html";
+          i = 6;
+          break;
+		case "#need-help":
+          pathn = "./pages/need-help.html";
+          i = 7;
+          break;
+        
+        default:
+          pathn = "./pages/index.html";
+          i = 0;
+          break
+      }
+      $("#content").load(pathn);
+      $(".userMenu li").eq(i).addClass("current").siblings().removeClass("current")
+    }
+    var sId = window.location.hash;
+    loadInner(sId)
+  });
+</script> 
+<!--内嵌样式表-->
 <style>
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Zen+Maru+Gothic&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -31,7 +106,8 @@ html {
 }
 a {
     text-decoration: none;
-    color: #fb7299
+    color: #fb7299;
+    cursor: pointer;
 }
 a:active, a:hover {
     outline: 0;
@@ -43,10 +119,6 @@ body p {
     color: #3498db;
     font-size: 1.5em;
     font-weight: 100;
-    letter-spacing: 0.75em;
-}
-.btm {
-    background-color: rgba(252, 252, 252, 0.5)
 }
 .sidebar {
     position: absolute;
@@ -91,7 +163,7 @@ label #btn {
     top: 8px;
     padding: 6px 10px;
     z-index: 30;
-	font-size: 25px;
+    font-size: 25px;
     color: #FFFFFF;
 }
 label #cancel {
@@ -112,9 +184,6 @@ label #cancel {
 #check:checked ~ label #cancel {
     left: 8px;
 }
-i {
-    font-style: normal;
-}
 .header {
     box-shadow: 8px 8px 8px #BFBFBF;
     background-color: #fb7299;
@@ -125,102 +194,37 @@ i {
     color: #fff;
     text-align: center;
     font-weight: 100;
-    line-height: 64px;
-    font-size: 3em;
+    font-size: 2.75em;
     font-family: 'ZCOOL KuaiLe', cursive;
 }
 </style>
-<!--重要！！！ 单页面重要依赖库jquery！！！一定要在jquery加载完后在使用单页面--> 
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script> 
-<script sec="./JavaScript/main.js"
-<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fl2d.js"></script> 
-<script src="https://image-1309525160.cos.ap-beijing.myqcloud.com/live2d%2Fstatic%2Fpio.js"></script> 
-<!--百度统计--> 
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?60297d1229e157e97320df253bf06e97";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s)
-    })();
-</script> 
-<!--单页面锚点--> 
-<script>
-  $(function() {
-    $(".sidebar").on("click", "li", function() {
-      var sId = $(this).data("id");
-      window.location.hash = sId;
-      loadInner(sId)
-    });
-
-    function loadInner(sId) {
-      var sId = window.location.hash;
-      var pathn, i;
-      switch (sId) {
-        case "#center":
-          pathn = "./pages/index.html";
-          i = 0;
-          break;
-        case "#about-railgun":
-          pathn = "./pages/about-railgun.html";
-          i = 1;
-          break;
-		case "#artalk":
-          pathn = "./pages/artalk.html";
-          i = 2;
-          break;
-        case "#links":
-          pathn = "./pages/links.html";
-          i = 3;
-          break;
-        case "#about":
-          pathn = "./pages/about.html";
-          i = 4;
-          break;
-        case "#blog":
-          pathn = "./pages/logs.html";
-          i = 5;
-          break;
-		case "#need-help":
-          pathn = "./pages/need-help.html";
-          i = 6;
-          break;
-        
-        default:
-          pathn = "./pages/index.html";
-          i = 0;
-          break
-      }
-      $("#content").load(pathn);
-      $(".userMenu li").eq(i).addClass("current").siblings().removeClass("current")
-    }
-    var sId = window.location.hash;
-    loadInner(sId)
-  });
-</script>
 </head>
-
 <body>
 <header class="header">
-  <h1 id="h-h">⌈爱我超电磁炮⌋</h1>
+  <h1 id="h-h">爱我超电磁炮</h1>
 </header>
 <div>
   <input type="checkbox" id="check">
-  <label for="check"> <i id="btn"><ion-icon name="code-slash-outline"></ion-icon></i><i id="cancel"><ion-icon name="chevron-forward-outline"></ion-icon></i> </label>
+  <label for="check"> <i id="btn">
+    <ion-icon name="code-slash-outline"></ion-icon>
+    </i><i id="cancel">
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+    </i> </label>
   <div class="sidebar">
     <ul class="userMenu">
       <li class="current" data-id="center"><a>主页</a></li>
       <li data-id="about-railgun"><a>关于美琴</a></li>
+      <li data-id="photos"><a>图片墙</a></li>
       <li data-id="artalk"><a>留言板</a></li>
       <li data-id="links"><a>友情链接</a></li>
       <li data-id="about"><a>关于我们</a></li>
       <li data-id="blog"><a>公告栏</a></li>
       <li data-id="need-help"><a>招贤纳士</a></li>
-	  <li><a href="dev.html">实验室</a></li>
-	  <li><a><span id="busuanzi_value_site_pv"></span></a></li>
+      <li><a href="dev.html">实验室</a></li>
       <!--GitHub仓库-->
-      <li> <a href="https://github.com/misaka-mikoto-love/misaka-mikoto-love.github.io" title="前往仓库" target="_blank"> <ion-icon name="logo-github"></ion-icon></a> </li>
+      <li> <a href="https://github.com/misaka-mikoto-love/misaka-mikoto-love.github.io" title="前往仓库" target="_blank">
+        <ion-icon name="logo-github"></ion-icon>
+        </a> </li>
     </ul>
   </div>
 </div>
@@ -231,20 +235,29 @@ i {
   <div class="pio-action"></div>
   <canvas id="pio" width="240" height="320"></canvas>
 </div>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<footer style="height: 80px;display: block;">
+  <div style="padding-bottom: 0px">
+    <p style="text-align:center;background-color: #fff;color: #000;font-size: 1em">作者：roll-day</p>
+    <p style="text-align:center;background-color: #fff;color: #000;font-size: 1em">本站总访问量<span id="busuanzi_value_site_pv"></span>次</p>
+  </div>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> 
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
 <!--移动端尚未适配-->
 </body>
-<!--要在js和css加载完后引用-->
 <script>
+	//在页面加载完后使用
 	var pio = new Paul_Pio({
     "mode": "fixed",
-    "hidden": true,
+    "hidden": false,
     "content": {
     "welcome": ["欢迎来到这里！", "今天天气不错，一起来玩吧！", "哼哼~"],
     },
-    "night": "single.night()",
-    "model": ["./live2d/mikoto/mikoto.model.json"]
+    "night": "",
+    "model": ["./live2d/mikoto/mikoto.model.json",
+			  "./live2d/kuroko/kuroko.model.json",
+			  "./live2d/uiharu/uiharu.model.json",
+			  "./live2d/saten/saten.model.json",]
 });</script>
 <!--网页作者：roll-day-->
 </html>
