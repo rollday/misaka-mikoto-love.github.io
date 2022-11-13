@@ -17,9 +17,8 @@ ul li {
 }
 #did {
     box-shadow: 2px 4px 6px #BFBFBF;
-    height: 64px;
+    height: auto;
     width: 100%;
-    left: 15%;
 }
 /*滚动图片/参数勿调*/
 li>img {
@@ -33,7 +32,8 @@ li>img {
     overflow: hidden;
 }
 .nnv ul {
-    width: 300%;
+	/*某些移动设备在移动时因为宽度不够而一组图片未显示完，直接加到4组图片的长度（气愤*/
+    width: 3600px;
     height: 100%;
     animation: picmove 10s linear infinite forwards;
 }
@@ -50,7 +50,7 @@ transform: translate(calc(-9 * 200px))
 
 <body>
 <div id="did">
-  <p style="font-size:1.25em;font-family: 'Zen Kaku Gothic New', sans-serif;"> 君の指先を舞ってる電光は、私の一生変わらない信仰であり、このレールガンだけが永遠！ </p>
+  <p style="font-size:1.5em;font-family: 'Zen Kaku Gothic New', sans-serif;"> 君の指先を舞ってる電光は、私の一生変わらない信仰であり、このレールガンだけが永遠！ </p>
 </div>
 <!--注意，网页图片从储存桶中加载，注意流量使用-->
 <nav class="nnv">
