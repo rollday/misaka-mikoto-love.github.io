@@ -115,13 +115,17 @@ a:active, a:hover {
 body {
     background-color: #fff;
 }
+body {
+    padding-top: 72px;
+}
 body p {
     color: #3498db;
     font-size: 1.5em;
     font-weight: 100;
 }
 .sidebar {
-    position: absolute;
+    position: fixed;
+    top: 64px;
     left: -200px;
     width: 200px;
     height: 100%;
@@ -189,6 +193,9 @@ label #cancel {
     background-color: #fb7299;
     height: 64px;
     width: 100%;
+    position: fixed;
+	top: 0px;
+	z-index: 99;
 }
 #h-h {
     color: #fff;
@@ -203,12 +210,12 @@ label #cancel {
 <header class="header">
   <h1 id="h-h">爱我超电磁炮</h1>
 </header>
-<div>
+<div id="sdb" style="position: fixed;top: 0px;z-index: 99;">
   <input type="checkbox" id="check">
   <label for="check"> <i id="btn">
-    <ion-icon name="code-slash-outline"></ion-icon>
+    <ion-icon name="menu"></ion-icon>
     </i><i id="cancel">
-    <ion-icon name="chevron-forward-outline"></ion-icon>
+    <ion-icon name="chevron-forward"></ion-icon>
     </i> </label>
   <div class="sidebar">
     <ul class="userMenu">
