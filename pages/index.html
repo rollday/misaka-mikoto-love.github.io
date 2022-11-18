@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+<meta charset="utf-8">
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60297d1229e157e97320df253bf06e97";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s)
+    })();
+</script>
+<style type="text/css">
+ul li {
+    list-style: none
+}
+#did {
+    box-shadow: 2px 4px 6px #BFBFBF;
+    height: auto;
+    width: 100%;
+}
+/*滚动图片/参数勿调*/
+.nnv ul li>img {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.nnv {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.nnv ul {
+    /*某些移动设备在移动时因为宽度不够而一组图片未显示完，直接加到4组图片的长度（气愤*/
+    width: 3600px;
+    height: 100%;
+    animation: picmove 10s linear infinite forwards;
+}
+@keyframes picmove {
+from {
+transform: translate(0)
+}
+to {
+transform: translate(calc(-9 * 200px))
+}
+}
+/* 手风琴效果 */
+/*应用手风琴工作宽度的时间
+图像宽度 = 36vw
+图像总数 = 5
+所以悬停图像的宽度 = 36vw
+未悬停图像的宽度 = 4vw 
+所以容器总宽度 = 36 + 8*4 = 68vw;
+默认宽度 = 68/5 = 13.6vw;
+*/
+
+.accordian {
+    /*96vw指图片展开+4*图片被收纳*/
+    width: 68vw;
+height: calc(68/16*9vw);
+    overflow: hidden;
+    padding-left: calc( (100% - 68vw)/2 )
+}
+/*一个防止某些浏览器闪烁的小hack*/
+.accordian ul {
+    width: 2000px;/*这将给最后一件物品足够的移动空间
+而不是坠落/盘旋时闪烁.*/
+}
+.accordian li {
+    position: relative;
+    display: block;
+    /*这里的li的宽度是一份li未展开前的宽度*/
+    width: 13.6vw;
+    /*向右折叠*/
+    float: left;
+    border-left: 1px solid #888;
+    box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+    /*过渡以产生动画效果*/
+    transition: all 0.5s;
+}
+/*减少未悬停元素*/
+.accordian ul:hover li {/*这是没有被悬停的li的宽度*/
+    width: 8vw;
+}
+/*应用悬停效果*/
+/*LI悬停样式应该覆盖UL悬停样式*/
+.accordian ul li:hover {/*这是被悬停的li的宽度*/
+    width: 36vw;
+}
+.accordian li img {
+    display: block;
+}
+.accordian ul li div {
+    display: none
+}
+.accordian ul li:hover div {
+    display: inline
+}
+img {
+    width: 36vw;
+    higth: auto;
+}
+.accordian ul li div {
+    background-color: #fff;
+    position: relative;
+    top: -36vw;
+    width: 36vw;
+}
+.accordian ul li div p {
+    background-color: rgba(255,243,243,0.75);
+}
+</style>
+</head>
+
+<body>
+<div id="did">
+  <p style="font-size:1.5em;font-family: 'Zen Kaku Gothic New', sans-serif;"> 君の指先を舞ってる電光は、私の一生変わらない信仰であり、このレールガンだけが永遠！ </p>
+</div>
+<!--注意，网页图片从储存桶中加载，注意流量使用-->
+<nav class="nnv">
+  <ul>
+    <li><img src="./image/1.webp" alt="滚动图片_1" /></li>
+    <li><img src="./image/2.webp" alt="滚动图片_2" /></li>
+    <li><img src="./image/3.webp" alt="滚动图片_3" /></li>
+    <li><img src="./image/5.webp" alt="滚动图片_4" /></li>
+    <li><img src="./image/6.webp" alt="滚动图片_5" /></li>
+    <li><img src="./image/7.webp" alt="滚动图片_6" /></li>
+    <li><img src="./image/8.webp" alt="滚动图片_7" /></li>
+    <li><img src="./image/9.webp" alt="滚动图片_8" /></li>
+    <li><img src="./image/10.webp" alt="滚动图片_9" /></li>
+    <!--图片重复-->
+    <li><img src="./image/1.webp" alt="滚动图片_1" /></li>
+    <li><img src="./image/2.webp" alt="滚动图片_2" /></li>
+    <li><img src="./image/3.webp" alt="滚动图片_3" /></li>
+    <li><img src="./image/5.webp" alt="滚动图片_4" /></li>
+    <li><img src="./image/6.webp" alt="滚动图片_5" /></li>
+    <li><img src="./image/7.webp" alt="滚动图片_6" /></li>
+    <li><img src="./image/8.webp" alt="滚动图片_7" /></li>
+    <li><img src="./image/9.webp" alt="滚动图片_8" /></li>
+    <li><img src="./image/10.webp" alt="滚动图片_9" /></li>
+  </ul>
+</nav>
+<br>
+<div>
+  <h2 style="color:#E18393 ;width: 7em;">谁是御坂美琴？</h2>
+  <h4 style="color:#E18393 ">who is misaka mikoto</h4>
+  <hr>
+  <p>《魔法禁书目录》中的人物及《科学超电磁炮》的主人公。<br>
+    学园都市中仅有的七名超能力者中排名第三位，学园都市最强“电击使”，代号“超电磁炮”。<br>
+    贵族女校常盘台中学二年级学生，有“常盘台的王牌”和“最强无敌的电击公主”之称。<br>
+    性格好胜、正义感强，有着男孩子般的爽朗性格，但是却没有耐心，非常不坦率。</p>
+</div>
+<p>想要加入项目吗？<br>
+  邮件至z3551978100@outlook.com 或 前往前往留言板提出建议</p>
+<ion-icon name="logo-css3"></ion-icon>
+<ion-icon name="logo-javascript"></ion-icon>
+<ion-icon name="logo-github"></ion-icon>
+<ion-icon name="logo-tux"></ion-icon>
+</body>
+</html>
