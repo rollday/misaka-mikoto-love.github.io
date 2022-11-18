@@ -14,87 +14,16 @@
 <!---->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--统计--> 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> 
+
 <!--Google字体库/2套字体-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
-<!--重要！！！ Ajax重要依赖库jquery！！！一定要在jquery加载完后再使用单页面--> 
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script> 
-<!--看板娘--> 
-<script src="./live2d/static/l2d.js"></script> 
-<script src="./live2d/static/pio.js"></script>
 <link href="./live2d/static/pio.css" rel="stylesheet" type="text/css">
 <!-- Artalk -->
 <link href="http://101.43.191.41:8080/dist/Artalk.css" rel="stylesheet">
-<script src="http://101.43.191.41:8080/dist/Artalk.js"></script> 
 
-<!--百度统计--> 
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?60297d1229e157e97320df253bf06e97";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s)
-    })();
-</script> 
-<!--单页面锚点--> 
-<script>
-  $(function() {
-    $(".sidebar").on("click", "li", function() {
-      var sId = $(this).data("id");
-      window.location.hash = sId;
-      loadInner(sId)
-    });
-
-    function loadInner(sId) {
-      var sId = window.location.hash;
-      var pathn, i;
-      switch (sId) {
-        case "#center":
-          pathn = "./pages/index.html";
-          i = 0;
-          break;
-        case "#about-railgun":
-          pathn = "./pages/about-railgun.html";
-          i = 1;
-          break;
-		case "#photos":
-          pathn = "./pages/photos.html";
-          i = 2;
-          break;
-		case "#artalk":
-          pathn = "./pages/artalk.html";
-          i = 3;
-          break;
-        case "#links":
-          pathn = "./pages/links.html";
-          i = 4;
-          break;
-        case "#about":
-          pathn = "./pages/about.html";
-          i = 5;
-          break;
-        case "#blog":
-          pathn = "./pages/logs.html";
-          i = 6;
-          break;
-		        
-        default:
-          pathn = "./pages/index.html";
-          i = 0;
-          break
-      }
-      $("#content").load(pathn);
-      $(".userMenu li").eq(i).addClass("current").siblings().removeClass("current")
-    }
-    var sId = window.location.hash;
-    loadInner(sId)
-  });
-</script> 
 <!--内嵌样式表-->
 <style>
 * {
@@ -248,9 +177,79 @@ label #cancel {
     <p style="text-align:center;background-color: #fff;color: #000;font-size: 1em">本站总访问量<span id="busuanzi_value_site_pv"></span>次</p>
   </div>
 </footer>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> 
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="http://101.43.191.41:8080/dist/Artalk.js"></script>
+<!--重要！！！ Ajax重要依赖库jquery！！！一定要在jquery加载完后再使用单页面-->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script>
+<!--百度统计-->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60297d1229e157e97320df253bf06e97";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s)
+    })();
+</script>
+<!--单页面锚点-->
+<script>
+  $(function() {
+    $(".sidebar").on("click", "li", function() {
+      var sId = $(this).data("id");
+      window.location.hash = sId;
+      loadInner(sId)
+    });
+
+    function loadInner(sId) {
+      var sId = window.location.hash;
+      var pathn, i;
+      switch (sId) {
+        case "#center":
+          pathn = "./pages/index.html";
+          i = 0;
+          break;
+        case "#about-railgun":
+          pathn = "./pages/about-railgun.html";
+          i = 1;
+          break;
+		case "#photos":
+          pathn = "./pages/photos.html";
+          i = 2;
+          break;
+		case "#artalk":
+          pathn = "./pages/artalk.html";
+          i = 3;
+          break;
+        case "#links":
+          pathn = "./pages/links.html";
+          i = 4;
+          break;
+        case "#about":
+          pathn = "./pages/about.html";
+          i = 5;
+          break;
+        case "#blog":
+          pathn = "./pages/logs.html";
+          i = 6;
+          break;
+		        
+        default:
+          pathn = "./pages/index.html";
+          i = 0;
+          break
+      }
+      $("#content").load(pathn);
+      $(".userMenu li").eq(i).addClass("current").siblings().removeClass("current")
+    }
+    var sId = window.location.hash;
+    loadInner(sId)
+  });
+</script>
+<!--看板娘-->
+<script src="./live2d/static/l2d.js"></script>
+<script src="./live2d/static/pio.js"></script>
 <script>
 	//在页面加载完后使用
 	var pio = new Paul_Pio({
@@ -265,5 +264,7 @@ label #cancel {
 			  "./live2d/uiharu/uiharu.model.json",
 			  "./live2d/saten/saten.model.json",]
 });</script>
+<!--统计-->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!--网页作者：roll-day-->
 </html>
