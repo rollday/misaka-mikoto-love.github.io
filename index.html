@@ -14,8 +14,6 @@
 <!---->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--看板娘-->
-<link href="./live2d/static/pio.css" rel="stylesheet" type="text/css">
 <!--Google字体库/2套字体-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,185 +21,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
 <!-- Artalk -->
 <link href="https://cdn.bootcdn.net/ajax/libs/artalk/2.4.3/Artalk.css" rel="stylesheet">
-
-<!--内嵌样式表-->
-<style>
-/*总体布局*/
-* {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-}
-html {
-    font-family: 'ZCOOL KuaiLe', cursive;
-}
-a {
-    text-decoration: none;
-    color: #fb7299;
-    cursor: pointer;
-}
-h1 {
-    color: #E18393;
-}
-h2 {
-    color: #E18393;
-}
-h3 {
-    color: #E18393;
-}
-a:active, a:hover {
-    outline: 0;
-}
-body {
-    background-color: #fff;
-}
-body {
-    padding-top: 72px;
-}
-body p {
-    color: #3498db;
-    font-size: 1.5em;
-    font-weight: 100;
-}
-header {
-    box-shadow: 8px 8px 8px #BFBFBF;
-    background-color: #fb7299;
-    height: 64px;
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    z-index: 99;
-}
-#h-h {
-    color: #fff;
-    text-align: center;
-    font-weight: 100;
-    font-size: 2.75em;
-    font-family: 'ZCOOL KuaiLe', cursive;
-}
-</style>
-<style>
-/*侧边栏*/
-.sidebar {
-    position: fixed;
-    top: 64px;
-    left: -200px;
-    width: 200px;
-    height: 100%;
-    background: #FFFFFF;
-    transition: all .5s ease;
-    box-shadow: 2px 4px 6px #BFBFBF;
-    z-index: 999;
-}
-.sidebar ul a {
-    display: block;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    line-height: 45px;
-    font-size: 18px;
-    color: #fb7299;
-    box-sizing: border-box;
-    border-top: 1px solid rgba(255, 255, 255, .1);
-    border-bottom: 1px;
-    transition: .4s;
-}
-ul li:hover a {
-    padding-left: 30px;
-    color: aqua;
-    border-left: 5px solid #fb7299;
-    transition: all 0.5s;
-}
-#check {
-    display: none;
-}
-label #btn, label #cancel {
-    position: absolute;
-    cursor: pointer;
-    background-color: #fb7299;
-    border-radius: 3px;
-}
-label #btn {
-    left: 8px;
-    top: 8px;
-    padding: 6px 10px;
-    z-index: 30;
-    font-size: 25px;
-    color: #FFFFFF;
-}
-label #cancel {
-    z-index: 1;
-    left: 8px;
-    top: 8px;
-    font-size: 25px;
-    color: #FFFFFF;
-    padding: 6px 10px;
-}
-#check:checked ~ .sidebar {
-    left: 0;
-}
-#check:checked ~ label #btn {
-    left: 8px;
-    display: none;
-}
-#check:checked ~ label #cancel {
-    left: 8px;
-}
-/*主要思路：检测checkbox是否被check，是则侧边栏从-200到0，否 则从0到-200*/
-</style>
-<style>
-/*滚动条*/
-/*div滚动条*/
-.box {
-    width: 150px;
-    height: 200px;
-    overflow: scroll;
-    margin: 100px;
-}
-.scrollbar {
-    width: 30px;
-    height: 300px;
-    margin: 0 auto;
-}
-/*滚动条整体样式*/
-.box::-webkit-scrollbar {
-width: 10px;
-height: 1px;
-}
-/*滚动条滑块*/
-.box::-webkit-scrollbar-thumb {
-border-radius: 10px;
--webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-background: #535353;
-}
-/*滚动条轨道*/
-.box::-webkit-scrollbar-track {
--webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
-border-radius: 10px;
-background: #ccc;
-}
-/*
-<div class="box">
-  <div class="scrollbar"></div>
-</div>
-*/
-/*页面滚动条*/
-/*滚动条里面轨道*/
-body::-webkit-scrollbar-track {
--webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
-background-color: #C7C7C7;
-}
-/*定义滚动条整体的样式*/
-body::-webkit-scrollbar {
-width: 6px;
-background-color: #C7C7C7;
-}
-/*滚动条的样式*/
-body::-webkit-scrollbar-thumb {
-height:20px;
-background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #fb7299), color-stop(0.4, #E18393), color-stop(0.8, #fb7299));
-}
-</style>
+<link href="style/main.css" rel="stylesheet">
+<script src="JavaScript/main.js"></script>
+<style></style>
+<style></style>
+<style></style>
 </head>
 <body>
 <header>
@@ -234,9 +58,7 @@ background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2
 <!--重要 单页面加载div-->
 <div id="content"></div>
 <!--网页看板娘-->
-<div> 
-  <script src="./live2d/static/l2d.js"></script> 
-  <script src="./live2d/static/pio.js"></script>
+<div>
   <div class="pio-container right">
     <div class="pio-action"></div>
     <canvas id="pio" width="240" height="320"></canvas>
@@ -252,8 +74,9 @@ background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2
     "model": ["./live2d/mikoto/mikoto.model.json",
 			  "./live2d/kuroko/kuroko.model.json",
 			  "./live2d/uiharu/uiharu.model.json",
-			  "./live2d/saten/saten.model.json",]
-});</script></div>
+			  "./live2d/saten/saten.model.json",]});
+ </script> 
+</div>
 <footer style="height: 80px;display: block;">
   <div style="padding-bottom: 0px">
     <p style="text-align:center;background-color: #fff;color: #000;font-size: 1em">作者：roll-day</p>
