@@ -26,6 +26,7 @@
 
 <!--内嵌样式表-->
 <style>
+/*总体布局*/
 * {
     padding: 0;
     margin: 0;
@@ -62,6 +63,25 @@ body p {
     font-size: 1.5em;
     font-weight: 100;
 }
+header {
+    box-shadow: 8px 8px 8px #BFBFBF;
+    background-color: #fb7299;
+    height: 64px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+}
+#h-h {
+    color: #fff;
+    text-align: center;
+    font-weight: 100;
+    font-size: 2.75em;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+</style>
+<style>
+/*侧边栏*/
 .sidebar {
     position: fixed;
     top: 64px;
@@ -127,29 +147,67 @@ label #cancel {
 #check:checked ~ label #cancel {
     left: 8px;
 }
-.header {
-    box-shadow: 8px 8px 8px #BFBFBF;
-    background-color: #fb7299;
-    height: 64px;
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    z-index: 99;
+/*主要思路：检测checkbox是否被check，是则侧边栏从-200到0，否 则从0到-200*/
+</style>
+<style>
+/*滚动条*/
+/*div滚动条*/
+.box {
+    width: 150px;
+    height: 200px;
+    overflow: scroll;
+    margin: 100px;
 }
-#h-h {
-    color: #fff;
-    text-align: center;
-    font-weight: 100;
-    font-size: 2.75em;
-    font-family: 'ZCOOL KuaiLe', cursive;
+.scrollbar {
+    width: 30px;
+    height: 300px;
+    margin: 0 auto;
+}
+/*滚动条整体样式*/
+.box::-webkit-scrollbar {
+width: 10px;
+height: 1px;
+}
+/*滚动条滑块*/
+.box::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+background: #535353;
+}
+/*滚动条轨道*/
+.box::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
+border-radius: 10px;
+background: #ccc;
+}
+/*
+<div class="box">
+  <div class="scrollbar"></div>
+</div>
+*/
+/*页面滚动条*/
+/*滚动条里面轨道*/
+body::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
+background-color: #C7C7C7;
+}
+/*定义滚动条整体的样式*/
+body::-webkit-scrollbar {
+width: 6px;
+background-color: #C7C7C7;
+}
+/*滚动条的样式*/
+body::-webkit-scrollbar-thumb {
+height:20px;
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #fb7299), color-stop(0.4, #E18393), color-stop(0.8, #fb7299));
 }
 </style>
 </head>
 <body>
-<header class="header">
+<header>
   <h1 id="h-h">爱我超电磁炮</h1>
 </header>
-<div id="sdb" style="position: fixed;top: 0px;z-index: 99;">
+<div style="position: fixed;top: 0px;z-index: 99;">
   <input type="checkbox" id="check">
   <label for="check"> <i id="btn">
     <ion-icon name="menu"></ion-icon>
