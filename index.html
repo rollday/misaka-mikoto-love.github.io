@@ -14,14 +14,13 @@
 <!---->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Artalk -->
-<link href="https://cdn.bootcdn.net/ajax/libs/artalk/2.4.3/Artalk.css" rel="stylesheet">
+<!--看板娘-->
+<link href="./live2d/static/pio.css" rel="stylesheet" type="text/css">
 <!--Google字体库/2套字体-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
-<link href="./live2d/static/pio.css" rel="stylesheet" type="text/css">
 <!-- Artalk -->
 <link href="https://cdn.bootcdn.net/ajax/libs/artalk/2.4.3/Artalk.css" rel="stylesheet">
 
@@ -153,7 +152,7 @@ label #cancel {
       <li class="current" data-id="center"><a>主页</a></li>
       <li data-id="about-railgun"><a>关于美琴</a></li>
       <li data-id="photos"><a>图片墙</a></li>
-	  <li data-id="artalk"><a>留言板</a></li>
+      <li data-id="artalk"><a>留言板</a></li>
       <li data-id="links"><a>友情链接</a></li>
       <li data-id="about"><a>关于我们</a></li>
       <li data-id="blog"><a>公告栏</a></li>
@@ -168,10 +167,26 @@ label #cancel {
 <!--重要 单页面加载div-->
 <div id="content"></div>
 <!--网页看板娘-->
-<div class="pio-container right">
-  <div class="pio-action"></div>
-  <canvas id="pio" width="240" height="320"></canvas>
-</div>
+<div> 
+  <script src="./live2d/static/l2d.js"></script> 
+  <script src="./live2d/static/pio.js"></script>
+  <div class="pio-container right">
+    <div class="pio-action"></div>
+    <canvas id="pio" width="240" height="320"></canvas>
+  </div>
+  <script>
+	var pio = new Paul_Pio({
+    "mode": "fixed",
+    "hidden": true,
+    "content": {
+    "welcome": ["欢迎来到这里！", "今天天气不错，一起来玩吧！", "哼哼~"],
+    },
+    "night": "",
+    "model": ["./live2d/mikoto/mikoto.model.json",
+			  "./live2d/kuroko/kuroko.model.json",
+			  "./live2d/uiharu/uiharu.model.json",
+			  "./live2d/saten/saten.model.json",]
+});</script></div>
 <footer style="height: 80px;display: block;">
   <div style="padding-bottom: 0px">
     <p style="text-align:center;background-color: #fff;color: #000;font-size: 1em">作者：roll-day</p>
@@ -249,23 +264,6 @@ var _hmt = _hmt || [];
   });
 </script>
 <script src="https://cdn.bootcdn.net/ajax/libs/artalk/2.4.3/Artalk.js"></script>
-<!--看板娘-->
-<script src="./live2d/static/l2d.js"></script>
-<script src="./live2d/static/pio.js"></script>
-<script>
-	//在页面加载完后使用
-	var pio = new Paul_Pio({
-    "mode": "fixed",
-    "hidden": true,
-    "content": {
-    "welcome": ["欢迎来到这里！", "今天天气不错，一起来玩吧！", "哼哼~"],
-    },
-    "night": "",
-    "model": ["./live2d/mikoto/mikoto.model.json",
-			  "./live2d/kuroko/kuroko.model.json",
-			  "./live2d/uiharu/uiharu.model.json",
-			  "./live2d/saten/saten.model.json",]
-});</script>
 <!--统计-->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!--网页作者：roll-day-->
