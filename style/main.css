@@ -26,9 +26,8 @@ a:active, a:hover {
 }
 body {
   background-color: #fff;
-}
-body {
   padding-top: 72px;
+  background-image: url("../img/bg.png");
 }
 body p {
   color: #3498db;
