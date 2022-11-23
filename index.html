@@ -14,6 +14,8 @@
 <!---->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+<link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" type="text/css" rel="stylesheet">
 <!--Google字体库/2套字体-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +27,9 @@
 <script src="JavaScript/main.js"></script>
 </head>
 <body>
+<script>
+	NProgress.start();
+</script>
 <header>
   <h1 id="h-h">爱我超电磁炮</h1>
 </header>
@@ -51,9 +56,15 @@
         </a> </li>
     </ul>
   </div>
+<script>
+	NProgress.set(0.3);
+</script>
 </div>
 <!--重要 单页面加载div-->
 <div id="content"></div>
+<script>
+	NProgress.set(0.7);
+</script>
 <!--网页看板娘-->
 <div>
   <div class="pio-container right">
@@ -73,6 +84,9 @@
 			  "./live2d/uiharu/uiharu.model.json",
 			  "./live2d/saten/saten.model.json",]});
  </script> 
+<script>
+	NProgress.inc();
+</script>
 </div>
 <footer style="height: 80px;display: block;">
   <div style="padding-bottom: 0px">
@@ -153,5 +167,8 @@ var _hmt = _hmt || [];
 <script src="https://cdn.bootcdn.net/ajax/libs/artalk/2.4.3/Artalk.js"></script>
 <!--统计-->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+	NProgress.done();
+</script>
 <!--网页作者：roll-day-->
 </html>
