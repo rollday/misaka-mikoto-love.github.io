@@ -198,7 +198,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 3em;
   border: 3px solid #fff;
   transition: transform .3s;
-  background: url(avatar.jpg) center/contain;
+  background: url(../live2d/static/avatar.jpg) center/contain;
 }
 .pio-container.hidden .pio-show {
   display: block;
