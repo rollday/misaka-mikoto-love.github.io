@@ -2,51 +2,7 @@
 <html lang="zh-hans">
 <head>
 <meta charset="utf-8">
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?e0a1048b7b0e93e7ecd0a7f9a1a81083";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<style>
-.btm {
-    background-color: rgba(252, 252, 252, 0.5)
-}
-#div-d {
-    border-radius: 15px;
-    border: 1px solid #000;
-    width: 35em;
-    height: 18em;
-}
-#make-d-1 {
-    left: 1em;
-    top: 1em;
-    height: 7.25em;
-}
-#make-d-2 {
-    left: 18em;
-    top: -6.25em;
-    height: 7.25em;
-}
-#make-d-3 {
-    left: 1em;
-    top: -5.25em;
-    height: 7.25em;
-}
-.d-m {
-    border-radius: 15px;
-    border: 1px dashed #000;
-    width: 16em;
-    position: relative;
-}
-.d-m p {
-    position: relative;
-    left: 9px;
-}
-</style>
+<link href="./pages/need.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -87,47 +43,48 @@ var _hmt = _hmt || [];
     <p>还在进行 高中的学习，目前打算到23年就关掉服务器，不舍，但是 “高考不考写代码” 目前还会更新的</p>
   </div>
 </div>
+<div class="div-father">
+  <div class="dd1">
+    <p><a href="https://misaka-mikoto.jp">朋友的站点</a></p>
+    <br>
+    <br>
+    <br>
+  </div>
+  <div class="dd2">
+    <p><a href="https://roll-day.github.io">我的小博客（施工中</a></p>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
 <p id="main" class="btm">此网站已创立<span></span></p>
-<script type="text/javascript">
-                function toDouble(num) {
-                        num >= 10 ? num = '' + num : num = '0' + num;
-                        return num;
-                }
-                var main = $$('main'),
-                        span = $$('main').getElementsByTagName('span')[0];
-
-
-                function timer(year, month, day, hour, minute, seconds, elem) {
-                        var hour = hour || 0,
-                                minute = minute || 0,
-                                seconds = seconds || 0;
-                        var endTime = new Date();
-                        endTime.setFullYear(parseInt(year)),
-                                endTime.setMonth(parseInt(month) - 1),
-                                endTime.setDate(parseInt(day)),
-                                endTime.setHours(parseInt(hour)),
-                                endTime.setMinutes(parseInt(minute)),
-                                endTime.setSeconds(parseInt(seconds));
-                        setTime();
-                        setInterval(function() {
-                                setTime()
-                        }, 1000);
-
-                        function setTime() {
-                                var startTime = new Date();
-                                var lengthTime = parseInt((startTime.getTime() - endTime.getTime()) / 1000);
-                                var lSeconds = parseInt(lengthTime % 60),
-                                        lMinute = parseInt((lengthTime / 60) % 60),
-                                        lHour = Math.floor((lengthTime / 3600) % 24),
-                                        lDay = Math.floor(lengthTime / (24 * 3600));
-                                span.innerHTML = lDay + '天' + toDouble(lHour) + '小时' + toDouble(lMinute) + '分钟' + toDouble(lSeconds) + '秒';
-                        }
-                }
-
-                function $$(id) {
-                        return document.getElementById(id);
-                }
-                timer(2022, 08, 02, 0, 0, 0, span);
-        </script>
+<script src="./pages/need.js"></script>
+<div>
+  <h1>公告栏</h1>
+  <hr>
+  <h2>更新日志</h2>
+  <div>
+    <h2>22/11/21</h2>
+    <h3>更新 V2.1.2</h3>
+    <hr>
+    <p>解决了一些bug</p>
+    <p>增加了一些bug</p>
+  </div>
+  <br>
+  <div>
+    <h3>Issues</h3>
+    <hr>
+    <p>对移动端的适配超级差（尽量改</p>
+    <p>live2d加载速度较慢</p>
+  </div>
+</div>
+<hr>
+<div>
+  <h2>开发进展</h2>
+  <div>
+    <p>使用了域名欢迎访问<a href="http://misaka-mikoto.one">misaka-mikoto.one</a></p>
+    <p>界面UI优化</p>
+  </div>
+</div>
 </body>
 </html>
