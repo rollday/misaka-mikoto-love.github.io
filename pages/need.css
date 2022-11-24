@@ -1,0 +1,74 @@
+.btm {
+    background-color: rgba(252, 252, 252, 0.5)
+}
+#div-d {
+    border-radius: 15px;
+    border: 1px solid #000;
+    width: 35em;
+    height: 18em;
+}
+#make-d-1 {
+    left: 1em;
+    top: 1em;
+    height: 7.25em;
+}
+#make-d-2 {
+    left: 18em;
+    top: -6.25em;
+    height: 7.25em;
+}
+#make-d-3 {
+    left: 1em;
+    top: -5.25em;
+    height: 7.25em;
+}
+.d-m {
+    border-radius: 15px;
+    border: 1px dashed #000;
+    width: 16em;
+    position: relative;
+}
+.d-m p {
+    position: relative;
+    left: 9px;
+}
+.div-father div {
+    width: 20vw;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+.b-d {
+    border-radius: 15px;
+    border: 1px dashed #000;
+    width: 30em
+}
+
+img {
+    width: 24%;
+}
+
+ul li {
+    list-style: none
+}
+#did {
+    box-shadow: 2px 4px 6px #BFBFBF;
+    height: auto;
+    width: 100%;
+}
+/*滚动图片/参数勿调*/
+.nnv ul li>img {
+    width: 15vw;
+    height: 15vw;
+    float: left;
+}
+.nnv {
+    width: 100%;
+    height: 15vw;
+    overflow: hidden;
+}
+.nnv ul {
+    /*某些移动设备在移动时因为宽度不够而一组图片未显示完，直接加到4组图片的长度（气愤*/
+    width: 540vw;
+    height: 100%;
+    animation: picmove 10s linear infinite forwards;
+}
