@@ -3,7 +3,25 @@
 <head>
 <meta charset="utf-8">
 <script src="./pages/need.js"></script>
+<link href="./pages/need.css" rel="stylesheet" type="text/css">
 <style type="text/css">
+/*滚动图片/参数勿调*/
+.nnv ul li>img {
+    width: 15vw;
+    height: 15vw;
+    float: left;
+}
+.nnv {
+    width: 100%;
+    height: 15vw;
+    overflow: hidden;
+}
+.nnv ul {
+    /*某些移动设备在移动时因为宽度不够而一组图片未显示完，直接加到4组图片的长度（气愤*/
+    width: 540vw;
+    height: 100%;
+    animation: picmove 10s linear infinite forwards;
+}
 @keyframes picmove {
 from {
 transform: translate(0)
@@ -105,7 +123,6 @@ img {
     background-color: rgba(255,243,243,0.75);
 }
 </style>
-<link href="./pages/need.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
