@@ -1,42 +1,6 @@
 .btm {
     background-color: rgba(252, 252, 252, 0.5)
 }
-#div-d {
-    border-radius: 15px;
-    border: 1px solid #000;
-    width: 35em;
-    height: 18em;
-}
-#make-d-1 {
-    left: 1em;
-    top: 1em;
-    height: 7.25em;
-}
-#make-d-2 {
-    left: 18em;
-    top: -6.25em;
-    height: 7.25em;
-}
-#make-d-3 {
-    left: 1em;
-    top: -5.25em;
-    height: 7.25em;
-}
-.d-m {
-    border-radius: 15px;
-    border: 1px dashed #000;
-    width: 16em;
-    position: relative;
-}
-.d-m p {
-    position: relative;
-    left: 9px;
-}
-.div-father div {
-    width: 20vw;
-    border-radius: 5px;
-    border: 1px solid #cccccc;
-}
 .b-d {
     border-radius: 15px;
     border: 1px dashed #000;
