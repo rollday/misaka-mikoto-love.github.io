@@ -52,7 +52,6 @@
       <li data-id="about-railgun"><a>关于美琴</a></li>
       <li data-id="photos"><a>图片墙</a></li>
       <li data-id="artalk"><a>留言板</a></li>
-      <li data-id="about"><a>关于</a></li>
       <li><a href="./pages/game/">小游戏</a></li>
       <li><a href="dev.html">实验室</a></li>
       <!--GitHub仓库-->
@@ -96,6 +95,12 @@
 <footer style="height: 80px;display: block;">
   <div style="padding-bottom: 0px">
     <p style="text-align:center;background-color: #fff;color: #000;font-size: 1em">作者：roll-day</p>
+    <p style="color: #fff;background-color: #fff;text-align: center;width: min-content;" id="yingcang">你发现了<a href="./live2d/mikoto/expressions/index.html">一点东西</a></p>
+    <style>
+      #yingcang:hover {
+        background-color: #000;
+      }
+    </style>
     <p style="text-align:center;background-color: #fff;color: #000;font-size: 1em">本站总访问量<span id="busuanzi_value_site_pv"></span>次</p>
   </div>
 </footer>
@@ -143,10 +148,7 @@ var _hmt = _hmt || [];
           pathn = "./pages/artalk.html";
           i = 3;
           break;
-        case "#about":
-          pathn = "./pages/about.html";
-          i = 4;
-          break;
+
 		default:
           pathn = "./pages/index.html";
           i = 0;
