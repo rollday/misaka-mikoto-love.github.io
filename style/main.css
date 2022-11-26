@@ -15,21 +15,32 @@ a {
   cursor: pointer;
 }
 
-h1 {
-  color: #E18393;
-}
-
-h2 {
-  color: #E18393;
-}
-
-h3 {
+h1,
+h2,
+h4,
+h4,
+h5,
+h6 {
   color: #E18393;
 }
 
 a:active,
 a:hover {
   outline: 0;
+}
+
+@media screen and (min-width: 500px) {
+
+
+  .zhezhao {
+    color: #3498db;
+    background-color: #3498db;
+    width: min-content;
+  }
+
+  .zhezhao:hover {
+    background-color: #fff;
+  }
 }
 
 body {
@@ -219,6 +230,36 @@ body::-webkit-scrollbar-thumb {
   height: 20px;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #fb7299), color-stop(0.4, #E18393), color-stop(0.8, #fb7299));
 }
+
+/* 返回顶部小按钮 */
+.hid {
+  position: fixed;
+  left: 20px;
+  bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hid-a {
+  display: none;
+  position: fixed;
+  left: 20px;
+  bottom: 40px;
+}
+
+.hid-a a {
+  font-size: 1.25em;
+}
+
+.hid:hover .hid-a {
+  display: inline;
+  z-index: 999;
+}
+
+.hid:hover #hid-i {
+  display: none;
+}
+
+
 
 /* ----
 
