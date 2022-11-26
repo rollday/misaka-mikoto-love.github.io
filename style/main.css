@@ -55,6 +55,16 @@ body p {
   font-weight: 100;
 }
 
+::selection {
+  color: #fff;
+  background-color: #E18393;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #E18393;
+}
+
 header {
   box-shadow: 8px 8px 8px #BFBFBF;
   background-color: #fb7299;
