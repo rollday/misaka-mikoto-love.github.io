@@ -2,7 +2,8 @@
  * Use of this source code is governed by a BSD-style license that can be
  * found in the LICENSE file. */
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -16,7 +17,7 @@ html, body {
 }
 
 .icon-offline {
-  content: -webkit-image-set( url(assets/default_100_percent/100-error-offline.png) 1x, url(assets/default_200_percent/200-error-offline.png) 2x);
+  content: -webkit-image-set(url(assets/default_100_percent/100-error-offline.png) 1x, url(assets/default_200_percent/200-error-offline.png) 2x);
   position: relative;
 }
 
@@ -71,9 +72,12 @@ html, body {
 }
 
 @media (max-width: 420px) {
-  .suggested-left > #control-buttons, .suggested-right > #control-buttons {
+
+  .suggested-left>#control-buttons,
+  .suggested-right>#control-buttons {
     float: none;
   }
+
   .snackbar {
     left: 0;
     bottom: 0;
@@ -86,12 +90,15 @@ html, body {
   h1 {
     margin: 0 0 15px;
   }
+
   .icon-offline {
     margin: 0 0 10px;
   }
+
   .interstitial-wrapper {
     margin-top: 5%;
   }
+
   .nav-wrapper {
     margin-top: 30px;
   }
@@ -114,6 +121,7 @@ html, body {
   .offline .interstitial-wrapper {
     margin-bottom: 90px;
   }
+
   .icon-offline {
     margin-bottom: 20px;
   }
@@ -123,6 +131,7 @@ html, body {
   .icon-offline {
     margin-bottom: 0;
   }
+
   .offline .runner-container {
     top: 10px;
   }
