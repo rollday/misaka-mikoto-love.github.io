@@ -38,9 +38,9 @@ function $$(id) {
 }
 timer(2022, 08, 02, 0, 0, 0, span);
 var _hmt = _hmt || [];
-(function() {
+(function () {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?e0a1048b7b0e93e7ecd0a7f9a1a81083";
-  var s = document.getElementsByTagName("script")[0]; 
+  var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
