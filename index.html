@@ -27,42 +27,6 @@
 </head>
 
 <body>
-  <script>
-    NProgress.start();
-  </script>
-  <header>
-    <h1 id="h-h">爱我超电磁炮</h1>
-  </header>
-  <div id="main-checkbox">
-    <input type="checkbox" id="check" name="check">
-    <label for="check"> <i id="btn">
-        <ion-icon name="menu"></ion-icon>
-      </i><i id="cancel">
-        <ion-icon name="chevron-forward"></ion-icon>
-      </i> </label>
-    <div class="sidebar">
-      <ul class="userMenu">
-        <li class="current" data-id="center"><a>主页</a></li>
-        <li data-id="about-railgun"><a>关于美琴</a></li>
-        <li data-id="photos"><a>图片墙</a></li>
-        <li data-id="artalk"><a>留言板</a></li>
-        <li><a href="./pages/game/">小游戏</a></li>
-        <li>
-          <a href="https://github.com/misaka-mikoto-love/misaka-mikoto-love.github.io" rel="noreferrer noopener"
-            title="前往仓库" target="_blank">
-            <ion-icon name="logo-github"></ion-icon>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <script>
-      NProgress.set(0.3);
-    </script>
-  </div>
-  <div id="content">Loading……</div>
-  <script>
-    NProgress.set(0.7);
-  </script>
   <div>
     <div class="pio-container right">
       <div class="pio-action"></div>
@@ -81,6 +45,42 @@
           "./live2d/uiharu/uiharu.model.json",
           "./live2d/saten/saten.model.json",]
       });
+    </script>
+    <script>
+      NProgress.start();
+    </script>
+    <header>
+      <h1 id="h-h">爱我超电磁炮</h1>
+    </header>
+    <div id="main-checkbox">
+      <input type="checkbox" id="check" name="check">
+      <label for="check"> <i id="btn">
+          <ion-icon name="menu"></ion-icon>
+        </i><i id="cancel">
+          <ion-icon name="chevron-forward"></ion-icon>
+        </i> </label>
+      <div class="sidebar">
+        <ul class="userMenu">
+          <li class="current" data-id="center"><a>主页</a></li>
+          <li data-id="about-railgun"><a>关于美琴</a></li>
+          <li data-id="photos"><a>图片墙</a></li>
+          <li data-id="artalk"><a>留言板</a></li>
+          <li><a href="./pages/game/">小游戏</a></li>
+          <li>
+            <a href="https://github.com/misaka-mikoto-love/misaka-mikoto-love.github.io" rel="noreferrer noopener"
+              title="前往仓库" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        NProgress.set(0.3);
+      </script>
+    </div>
+    <div id="content">Loading……</div>
+    <script>
+      NProgress.set(0.7);
     </script>
     <script>
       NProgress.inc();
