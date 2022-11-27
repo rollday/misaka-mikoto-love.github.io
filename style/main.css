@@ -89,14 +89,14 @@ footer {
 }
 
 footer div {
-  padding-bottom: 0px
+  padding-bottom: 0px;
 }
 
 footer div p {
   text-align: center;
   background-color: #fff;
   color: #000;
-  font-size: 1em
+  font-size: 1em;
 }
 
 /*侧边栏*/
@@ -226,6 +226,7 @@ background: #ccc;
 /*滚动条里面轨道*/
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
   background-color: #C7C7C7;
 }
 
@@ -269,6 +270,10 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 
+#icon {
+  font-size: 2.5em;
+}
+
 
 
 /* ----
@@ -287,8 +292,8 @@ body::-webkit-scrollbar-thumb {
   z-index: 52;
   color: #666;
   position: fixed;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 
 .pio-container .pio-show {
