@@ -36,7 +36,7 @@ function timer(year, month, day, hour, minute, seconds, elem) {
 function $$(id) {
   return document.getElementById(id);
 }
-timer(2022, 08, 02, 0, 0, 0, span);
+timer(2022, 08, 07, 0, 0, 0, span);
 var _hmt = _hmt || [];
 (function () {
   var hm = document.createElement("script");
