@@ -1,12 +1,47 @@
 <!doctype html>
-<html>
+<html lang="zh-hans">
 
 <head>
     <meta charset="utf-8">
     <title>HatsuneMiku</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(./test/bg.jpg);
+        }
+
+        body {
+            padding-top: 80px;
+        }
+
+        ::selection {
+            color: #fff;
+            background-color: #DC9090;
+        }
+
+        ::-moz-selection {
+            color: #fff;
+            background-color: #DC9090;
+        }
+
+        a {
+            text-decoration: none;
+            color: #DC9090;
+        }
+
         header {
             background-color: #60CCB9;
+            top: 0px;
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            z-index: 3;
+            padding-top: 0px;
         }
 
         header h1 {
@@ -15,16 +50,72 @@
             font-size: 60px
         }
 
-        #meun {
-            width: 95px;
-            height: 500px;
-            float: left;
-            background-color: #13D4A1
-        }
 
-        #meun b {
+        .sidebar b {
             font-size: 40px;
             color: #DC9090
+        }
+
+        #main-checkbox {
+            position: fixed;
+            top: 0px;
+            z-index: 99;
+        }
+
+        #main-checkbox {
+            position: fixed;
+            top: 0px;
+            z-index: 99;
+        }
+
+        .sidebar {
+            position: fixed;
+            padding-top: 80px;
+            left: -95px;
+            width: 95px;
+            height: 100%;
+            float: left;
+            background-color: #13D4A1;
+            transition: all .5s ease;
+        }
+
+        #check {
+            display: none;
+        }
+
+        label #btn,
+        label #cancel {
+            position: absolute;
+            cursor: pointer;
+            background-color: #60CCB9;
+            width: 95px;
+            height: 80px;
+        }
+
+        label #btn {
+            z-index: 30;
+            font-size: 25px;
+            color: #FFFFFF;
+            display: inline;
+        }
+
+        label #cancel {
+            z-index: 1;
+            font-size: 25px;
+            color: #FFFFFF;
+            display: none;
+        }
+
+        #check:checked~.sidebar {
+            left: 0;
+        }
+
+        #check:checked~label #btn {
+            display: none;
+        }
+
+        #check:checked~label #cancel {
+            display: inline;
         }
     </style>
 </head>
@@ -33,11 +124,22 @@
     <header>
         <h1>HatsunMiku</h1>
     </header>
-    <div id="meun">
-        <b>菜单</b><br>
-        <b><a href="owwo.html">待定</a></b>
-        <br>
-        <b>待定</b>
+    <div id="main-checkbox">
+        <input type="checkbox" id="check" name="check">
+        <label for="check">
+            <a id="btn">菜单
+                <ion-icon name="menu"></ion-icon>
+            </a>
+            <a id="cancel">返回
+                <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+        </label>
+        <div class="sidebar">
+            <b>菜单</b><br>
+            <b><a href="owwo.html">待定</a></b>
+            <br>
+            <b>待定</b>
+        </div>
     </div>
 </body>
 
