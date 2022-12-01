@@ -1,0 +1,23 @@
+.btm {
+    background-color: rgba(252, 252, 252, 0.5)
+}
+
+.b-d {
+    border-radius: 15px;
+    border: 1px dashed #000;
+    width: 30em
+}
+
+img {
+    width: 24%;
+}
+
+ul li {
+    list-style: none
+}
+
+#did {
+    box-shadow: 2px 4px 6px #BFBFBF;
+    height: auto;
+    width: 100%;
+}
