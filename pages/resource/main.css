@@ -1,0 +1,143 @@
+/*滚动图片/参数勿调*/
+.nnv ul li>img {
+    width: 15vw;
+    height: 15vw;
+    float: left;
+}
+
+.nnv {
+    width: 100%;
+    height: 15vw;
+    overflow: hidden;
+}
+
+.nnv ul {
+    /*某些移动设备在移动时因为宽度不够而一组图片未显示完，直接加到4组图片的长度（气愤*/
+    width: 540vw;
+    height: 100%;
+    animation: picmove 10s linear infinite forwards;
+}
+
+@keyframes picmove {
+    from {
+        transform: translate(0)
+    }
+
+    to {
+        transform: translate(calc(-9 * 15vw))
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nnv ul li>img {
+        width: 200px;
+        height: 200px;
+        float: left;
+    }
+
+    .nnv {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .nnv ul {
+        /*某些移动设备在移动时因为宽度不够而一组图片未显示完，直接加到4组图片的长度（气愤*/
+        width: 3600px;
+        height: 100%;
+        animation: picmove 10s linear infinite forwards;
+    }
+
+    @keyframes picmove {
+        from {
+            transform: translate(0)
+        }
+
+        to {
+            transform: translate(calc(-9 * 200px))
+        }
+    }
+}
+
+/* 手风琴效果 */
+/*应用手风琴工作宽度的时间
+图像宽度 = 36vw
+图像总数 = 5
+所以悬停图像的宽度 = 36vw
+未悬停图像的宽度 = 4vw 
+所以容器总宽度 = 36 + 8*4 = 68vw;
+默认宽度 = 68/5 = 13.6vw;
+*/
+
+.accordian {
+    /*96vw指图片展开+4*图片被收纳*/
+    width: 68vw;
+    height: calc(68/16*9vw);
+    overflow: hidden;
+    padding-left: calc((100% - 68vw)/2)
+}
+
+/*一个防止某些浏览器闪烁的小hack*/
+.accordian ul {
+    width: 2000px;
+    /*这将给最后一件物品足够的移动空间
+而不是坠落/盘旋时闪烁.*/
+}
+
+.accordian li {
+    position: relative;
+    display: block;
+    /*这里的li的宽度是一份li未展开前的宽度*/
+    width: 13.6vw;
+    /*向右折叠*/
+    float: left;
+    border-left: 1px solid #888;
+    box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+    /*过渡以产生动画效果*/
+    transition: all 0.5s;
+}
+
+/*减少未悬停元素*/
+.accordian ul:hover li {
+    /*这是没有被悬停的li的宽度*/
+    width: 8vw;
+}
+
+/*应用悬停效果*/
+/*LI悬停样式应该覆盖UL悬停样式*/
+.accordian ul li:hover {
+    /*这是被悬停的li的宽度*/
+    width: 36vw;
+}
+
+.accordian li img {
+    display: block;
+}
+
+.accordian ul li div {
+    display: none
+}
+
+.accordian ul li:hover div {
+    display: inline
+}
+
+img {
+    width: 36vw;
+    higth: auto;
+}
+
+.accordian ul li div {
+    background-color: #fff;
+    position: relative;
+    top: -36vw;
+    width: 36vw;
+}
+
+.accordian ul li div p {
+    background-color: rgba(255, 243, 243, 0.75);
+}
+
+.hid {
+    display: none;
+}
