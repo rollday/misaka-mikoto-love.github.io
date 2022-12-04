@@ -5,6 +5,8 @@
   text-decoration: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
 html {
   font-family: 'ZCOOL KuaiLe', cursive;
 }
