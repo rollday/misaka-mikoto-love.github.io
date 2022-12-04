@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://misaka-mikoto.one/</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://misaka-mikoto.one/pages/game/</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://misaka-mikoto.one/pages/about.html</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://misaka-mikoto.one/maps.html</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://misaka-mikoto.one/index.html</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://misaka-mikoto.one/pages/index.html</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://misaka-mikoto.one/pages/about-railgun.html</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://misaka-mikoto.one/pages/artalk.html</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://misaka-mikoto.one/pages/misaka-network.html</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://misaka-mikoto.one/pages/photos.html</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://misaka-mikoto.one/pages/game/index.html</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://misaka-mikoto.one/pages/note.html</loc>
+  <lastmod>2022-12-04T02:44:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
