@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="zh-hans">
-
 <head>
-    <meta charset="utf-8">
-    <title>关于</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet" />
-    <link href="../style/main.css" rel="stylesheet" />
-    <script>
+<meta charset="utf-8">
+<title>关于</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet" />
+<link href="../style/main.css" rel="stylesheet" />
+<script src="./resource/need.js"></script>
+<link href="./resource/need.css" rel="stylesheet" type="text/css">
+<link href="./resource/main.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2？family=M+PLUS+1&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+<script>
         var _hmt = _hmt || [];
         (function () {
             var hm = document.createElement("script");
@@ -19,86 +25,84 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-    <style>
-        .btm {
-            background-color: rgba(252, 252, 252, 0.5)
-        }
-
-        #div-d {
-            border-radius: 15px;
-            border: 1px solid #000;
-            width: 35em;
-            height: 18em;
-        }
-
-        #make-d-1 {
-            left: 1em;
-            top: 1em;
-            height: 7.25em;
-        }
-
-        #make-d-2 {
-            left: 18em;
-            top: -6.25em;
-            height: 7.25em;
-        }
-
-        #make-d-3 {
-            left: 1em;
-            top: -5.25em;
-            height: 7.25em;
-        }
-
-        .d-m {
-            border-radius: 15px;
-            border: 1px dashed #000;
-            width: 16em;
-            position: relative;
-        }
-
-        .d-m p {
-            position: relative;
-            left: 9px;
-        }
-    </style>
+<style>
+img {
+    width: auto;
+    height: auto;
+}
+</style>
+<style>
+.btm {
+    background-color: rgba(252, 252, 252, 0.5)
+}
+#div-d {
+    border-radius: 15px;
+    border: 1px solid #000;
+    width: 35em;
+    height: 18em;
+}
+#make-d-1 {
+    left: 1em;
+    top: 1em;
+    height: 7.25em;
+}
+#make-d-2 {
+    left: 18em;
+    top: -6.25em;
+    height: 7.25em;
+}
+#make-d-3 {
+    left: 1em;
+    top: -5.25em;
+    height: 7.25em;
+}
+.d-m {
+    border-radius: 15px;
+    border: 1px dashed #000;
+    width: 16em;
+    position: relative;
+}
+.d-m p {
+    position: relative;
+    left: 9px;
+}
+</style>
 </head>
 
 <body>
-    <header>
-        <h1 id="h-h">爱我超电磁炮</h1>
-        <div style="position: fixed;top:0px;left:0px">
-            <a href="../index.html">
-                <ion-icon name="arrow-back" style="font-size:2.5em;color:#fff"></ion-icon>
-            </a>
-        </div>
-    </header>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <div class="btm" style="width: 35em;">
-        <h1>作者</h1>
-    </div>
-    <div id="div-d" class="btm">
-        <div id="make-d-1" class="d-m">
-            <h3>roll-day</h3>
-            <p>贡献：大部分html,css<br>
-                一条咸鱼</p>
-        </div>
-        <div id="make-d-2" class="d-m">
-            <h3>Miku</h3>
-            <p>贡献：部分html</p>
-        </div>
-        <div id="make-d-3" class="d-m">
-            <h3>假酒哥</h3>
-            <p>贡献：视觉设计</p>
-        </div>
-    </div>
-    <h1>致谢</h1>
-    <h2>shbwb（misaka-fans）</h2>
-    <p>感谢他在初期给予我们的支持与鼓励</p>
-    <h2>曾鱼头（yutou1151）</h2>
-    <p>感谢她多次为我们的服务器配置环境</p>
-    <p id="main" class="btm">此网站已创立<span></span></p>
-    <script type="text/javascript">
+<header>
+  <h1 id="h-h">爱我超电磁炮</h1>
+  <div style="position: fixed;top:0px;left:0px" id="go-back"> <a href="../index.html">
+    <ion-icon name="arrow-back" style="font-size:2.5em;color:#fff"></ion-icon>
+    </a> </div>
+</header>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> 
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<div class="btm" style="width: 35em;">
+  <h1>作者</h1>
+</div>
+<div id="div-d" class="btm">
+  <div id="make-d-1" class="d-m">
+    <h3>roll-day</h3>
+    <p>贡献：大部分html,css<br>
+      一条咸鱼</p>
+  </div>
+  <div id="make-d-2" class="d-m">
+    <h3>Miku</h3>
+    <p>贡献：部分html</p>
+  </div>
+  <div id="make-d-3" class="d-m">
+    <h3>假酒哥</h3>
+    <p>贡献：视觉设计</p>
+  </div>
+</div>
+<h1>致谢</h1>
+<h2>shbwb（misaka-fans）</h2>
+<p>感谢他在初期给予我们的支持与鼓励</p>
+<h2>曾鱼头（yutou1151）</h2>
+<p>感谢她多次为我们的服务器配置环境</p>
+<p id="main" class="btm">此网站已创立<span></span></p>
+<script type="text/javascript">
         function toDouble(num) {
             num >= 10 ? num = '' + num : num = '0' + num;
             return num;
@@ -140,5 +144,4 @@
         timer(2022, 08, 02, 0, 0, 0, span);
     </script>
 </body>
-
 </html>
