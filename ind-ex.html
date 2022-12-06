@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="zh-hans">
+
 <head>
-<meta charset="utf-8" />
-<!---->
-<title>One-唯我超电磁炮_爱我炮姐</title>
-<link rel="icon" href="https://main-1309525160.cos.ap-beijing.myqcloud.com/img/title.jpg" />
-<meta name="keywords" content="misaka-mikoto.one,roll-day,某科学的超电磁炮,某科学,mikoto misaka,御坂,美琴,御坂美琴,御坂网络,,misaka,mikoto,misaka mikoto,misaka-mikoto,炮姐,超电磁炮" />
-<meta name="description" content="为御坂美琴写的小网站，为御坂美琴应援的小网站，爱我炮姐，希望都喜欢炮姐的你也能加入我们哦~" />
-<meta name="theme-color" content="#E18393" />
-<!---->
-<meta name="msvalidate.01" content="AFAC2044429F0EB9C34E9C53A6ED89F3" />
-<meta name="baidu-site-verification" content="code-ApgtxqVRQE" />
-<meta name="google-site-verification" content="JzgBGsuw4j-cRrXvXJrQCHdF9F4Hr-rCZU_2q7K8XX8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!---->
-<link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" type="text/css" rel="stylesheet" />
-<link href="https://cdn.bootcdn.net/ajax/libs/artalk/2.4.3/Artalk.css" rel="stylesheet" />
-<script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
-<link href="style/main.css" rel="stylesheet" />
-<script src="JavaScript/main.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2？family=M+PLUS+1&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-<style>
-@media screen and (max-width: 500px) {
-body p {
-    font-size: medium;
-}
-}
-#go-back {
-    display: none;
-}
-</style>
-<script></script>
+  <meta charset="utf-8" />
+  <!---->
+  <title>One-唯我超电磁炮_爱我炮姐</title>
+  <link rel="icon" href="https://main-1309525160.cos.ap-beijing.myqcloud.com/img/title.jpg" />
+  <meta name="keywords"
+    content="misaka-mikoto.one,roll-day,某科学的超电磁炮,某科学,mikoto misaka,御坂,美琴,御坂美琴,御坂网络,,misaka,mikoto,misaka mikoto,misaka-mikoto,炮姐,超电磁炮" />
+  <meta name="description" content="为御坂美琴写的小网站，为御坂美琴应援的小网站，爱我炮姐，希望都喜欢炮姐的你也能加入我们哦~" />
+  <meta name="theme-color" content="#E18393" />
+  <!---->
+  <meta name="msvalidate.01" content="AFAC2044429F0EB9C34E9C53A6ED89F3" />
+  <meta name="baidu-site-verification" content="code-ApgtxqVRQE" />
+  <meta name="google-site-verification" content="JzgBGsuw4j-cRrXvXJrQCHdF9F4Hr-rCZU_2q7K8XX8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!---->
+  <link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" type="text/css" rel="stylesheet" />
+  <link href="https://cdn.bootcdn.net/ajax/libs/artalk/2.4.3/Artalk.css" rel="stylesheet" />
+  <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+  <link href="style/main.css" rel="stylesheet" />
+  <script src="JavaScript/main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <style>
+    @media screen and (max-width: 500px) {
+      body p {
+        font-size: medium;
+      }
+    }
+
+    #go-back {
+      display: none;
+    }
+  </style>
+  <script></script>
 </head>
 
 <body>
-<div>
-  <div class="pio-container right">
-    <div class="pio-action"></div>
-    <canvas id="pio" width="240" height="320"></canvas>
-  </div>
-  <script>
+  <div>
+    <div class="pio-container right">
+      <div class="pio-action"></div>
+      <canvas id="pio" width="240" height="320"></canvas>
+    </div>
+    <script>
       var pio = new Paul_Pio({
         "mode": "fixed",
         "hidden": true,
@@ -56,65 +59,63 @@ body p {
           "./live2d/uiharu/uiharu.model.json",
           "./live2d/saten/saten.model.json",]
       });
-    </script> 
-  <script>
+    </script>
+    <script>
       NProgress.start();
     </script>
-  <header>
-    <h1 id="h-h">爱我超电磁炮</h1>
-  </header>
-  <div id="main-checkbox">
-    <input type="checkbox" id="check" name="check">
-    <label for="check"> <i id="btn">
-      <ion-icon name="menu"></ion-icon>
-      </i> <i id="cancel">
-      <ion-icon name="chevron-forward"></ion-icon>
-      </i> </label>
-    <div class="sidebar">
-      <ul class="userMenu">
-        <li class="current" data-id="center"><a>主页</a></li>
-        <li data-id="about-railgun"><a>关于美琴</a></li>
-        <li data-id="photos"><a>图片墙</a></li>
-        <li data-id="artalk"><a>留言板</a></li>
-        <li data-id="network"><a>御坂网络</a></li>
-        <li><a href="./pages/game/">小游戏</a></li>
-        <li><a href="./pages/about.html">关于</a></li>
-        <li> <a href="https://github.com/misaka-mikoto-love/misaka-mikoto-love.github.io" rel="noreferrer noopener"
+    <header>
+      <h1 id="h-h">爱我超电磁炮</h1>
+    </header>
+    <div id="main-checkbox">
+      <input type="checkbox" id="check" name="check">
+      <label for="check"> <i id="btn">
+          <ion-icon name="menu"></ion-icon>
+        </i> <i id="cancel">
+          <ion-icon name="chevron-forward"></ion-icon>
+        </i> </label>
+      <div class="sidebar">
+        <ul class="userMenu">
+          <li class="current" data-id="center"><a>主页</a></li>
+          <li data-id="about-railgun"><a>关于美琴</a></li>
+          <li data-id="photos"><a>图片墙</a></li>
+          <li data-id="artalk"><a>留言板</a></li>
+          <li data-id="network"><a>御坂网络</a></li>
+          <li><a href="./pages/game/">小游戏</a></li>
+          <li><a href="./pages/about.html">关于</a></li>
+          <li> <a href="https://github.com/misaka-mikoto-love/misaka-mikoto-love.github.io" rel="noreferrer noopener"
               title="前往仓库" target="_blank">
-          <ion-icon name="logo-github"></ion-icon>
-          </a> </li>
-      </ul>
+              <ion-icon name="logo-github"></ion-icon>
+            </a> </li>
+        </ul>
+      </div>
+      <script>
+        NProgress.set(0.3);
+      </script>
+    </div>
+    <div id="content">Loading……</div>
+    <div class="hid">
+      <div id="hid-i">
+        <ion-icon name="arrow-up" id="icon"></ion-icon>
+      </div>
+      <div class="hid-a"><a href="#">回到<br />
+          顶部</a></div>
     </div>
     <script>
-        NProgress.set(0.3);
-      </script> 
-  </div>
-  <div id="content">Loading……</div>
-  <div class="hid">
-    <div id="hid-i">
-      <ion-icon name="arrow-up" id="icon"></ion-icon>
-    </div>
-    <div class="hid-a"><a href="#">回到<br />
-      顶部</a></div>
-  </div>
-  <script>
       NProgress.set(0.7);
-    </script> 
-  <script>
-      NProgress.inc();
-    </script> 
-</div>
-<footer>
-  <div>
-    <p>作者:roll-day</p>
-    <p>本站总访问量<span id="busuanzi_value_site_pv"></span>次</p>
-    <p><a href="maps.html">网页地图</a></p>
+    </script>
   </div>
-</footer>
+  <footer>
+    <div>
+      <p>作者:roll-day</p>
+      <p>本站总访问量<span id="busuanzi_value_site_pv"></span>次</p>
+      <p><a href="maps.html">网页地图</a></p>
+    </div>
+  </footer>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script>
   var _hmt = _hmt || [];
   (function () {
@@ -156,7 +157,7 @@ body p {
           pathn = "./pages/misaka-network.html";
           i = 4;
           break;
-        
+
         default:
           pathn = "./pages/index.html";
           i = 0;
@@ -174,4 +175,5 @@ body p {
 <script>
   NProgress.done();
 </script>
+
 </html>
