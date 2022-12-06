@@ -309,7 +309,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 3em;
   border: 3px solid #fff;
   transition: transform .3s;
-  background: url(../live2d/static/avatar.jpg) center/contain;
+  background: url(https://main-1309525160.cos.ap-beijing.myqcloud.com/live2d/static/avatar.jpg) center/contain;
 }
 
 .pio-container.hidden .pio-show {
