@@ -5,10 +5,10 @@
   text-decoration: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
 
 html {
-  font-family: 'ZCOOL KuaiLe', cursive;
+  font-family: "ZCOOL KuaiLe", cursive;
 }
 
 a {
@@ -24,7 +24,7 @@ h4,
 h4,
 h5,
 h6 {
-  color: #E18393;
+  color: #e18393;
 }
 
 a:active,
@@ -33,8 +33,6 @@ a:hover {
 }
 
 @media screen and (min-width: 500px) {
-
-
   .zhezhao {
     color: #3498db;
     background-color: #3498db;
@@ -60,16 +58,16 @@ body p {
 
 ::selection {
   color: #fff;
-  background-color: #E18393;
+  background-color: #e18393;
 }
 
 ::-moz-selection {
   color: #fff;
-  background-color: #E18393;
+  background-color: #e18393;
 }
 
 header {
-  box-shadow: 8px 8px 8px #BFBFBF;
+  box-shadow: 8px 8px 8px #bfbfbf;
   background-color: #fb7299;
   height: 64px;
   width: 100%;
@@ -83,7 +81,7 @@ header {
   text-align: center;
   font-weight: 100;
   font-size: 2.75em;
-  font-family: 'ZCOOL KuaiLe', cursive;
+  font-family: "ZCOOL KuaiLe", cursive;
 }
 
 footer {
@@ -115,9 +113,9 @@ footer div p {
   left: -200px;
   width: 200px;
   height: 100%;
-  background: #FFFFFF;
-  transition: all .5s ease;
-  box-shadow: 2px 4px 6px #BFBFBF;
+  background: #ffffff;
+  transition: all 0.5s ease;
+  box-shadow: 2px 4px 6px #bfbfbf;
   z-index: 999;
 }
 
@@ -130,9 +128,9 @@ footer div p {
   font-size: 18px;
   color: #fb7299;
   box-sizing: border-box;
-  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 ul li:hover a {
@@ -160,7 +158,7 @@ label #btn {
   padding: 6px 10px;
   z-index: 30;
   font-size: 25px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 label #cancel {
@@ -168,20 +166,20 @@ label #cancel {
   left: 8px;
   top: 8px;
   font-size: 25px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 6px 10px;
 }
 
-#check:checked~.sidebar {
+#check:checked ~ .sidebar {
   left: 0;
 }
 
-#check:checked~label #btn {
+#check:checked ~ label #btn {
   left: 8px;
   display: none;
 }
 
-#check:checked~label #cancel {
+#check:checked ~ label #cancel {
   left: 8px;
 }
 
@@ -230,19 +228,26 @@ background: #ccc;
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
   box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
-  background-color: #C7C7C7;
+  background-color: #c7c7c7;
 }
 
 /*定义滚动条整体的样式*/
 body::-webkit-scrollbar {
   width: 6px;
-  background-color: #C7C7C7;
+  background-color: #c7c7c7;
 }
 
 /*滚动条的样式*/
 body::-webkit-scrollbar-thumb {
   height: 20px;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #fb7299), color-stop(0.4, #E18393), color-stop(0.8, #fb7299));
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.2, #fb7299),
+    color-stop(0.4, #e18393),
+    color-stop(0.8, #fb7299)
+  );
 }
 
 /* 返回顶部小按钮 */
@@ -277,8 +282,6 @@ body::-webkit-scrollbar-thumb {
   font-size: 2.5em;
 }
 
-
-
 /* ----
 
 # Pio Plugin
@@ -309,8 +312,9 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   border-radius: 3em;
   border: 3px solid #fff;
-  transition: transform .3s;
-  background: url(https://main-1309525160.cos.ap-beijing.myqcloud.com/live2d/static/avatar.jpg) center/contain;
+  transition: transform 0.3s;
+  background: url(https://main-1309525160.cos.ap-beijing.myqcloud.com/live2d/static/avatar.jpg)
+    center/contain;
 }
 
 .pio-container.hidden .pio-show {
@@ -328,38 +332,38 @@ body::-webkit-scrollbar-thumb {
 }
 
 .pio-container.left {
-  left: 0
+  left: 0;
 }
 
 .pio-container.right {
-  right: 0
+  right: 0;
 }
 
 .pio-container.active {
-  cursor: move
+  cursor: move;
 }
 
 .pio-container.static {
-  pointer-events: none
+  pointer-events: none;
 }
 
 .pio-container .pio-action {
   top: 3em;
   opacity: 0;
   position: absolute;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
 
 .pio-container.left .pio-action {
-  right: 0
+  right: 0;
 }
 
 .pio-container.right .pio-action {
-  left: 0
+  left: 0;
 }
 
 .pio-container:hover .pio-action {
-  opacity: 1
+  opacity: 1;
 }
 
 .pio-action span {
@@ -370,7 +374,7 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   text-align: center;
   border-radius: 66%;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   border: 1px solid #666;
   background: #fff center/70% no-repeat;
 }
@@ -400,16 +404,16 @@ body::-webkit-scrollbar-thumb {
   bottom: calc(100% - 2em);
   opacity: 0;
   z-index: -1;
-  font-size: .8em;
+  font-size: 0.8em;
   min-width: 12em;
   background: #f4d1d7;
-  padding: .75em 1em;
+  padding: 0.75em 1em;
   border-radius: 1em;
   visibility: hidden;
   position: absolute;
   word-break: break-all;
   border: 1px solid #eee;
-  transition: opacity .3s, visibility .3s;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .pio-container .pio-dialog.active {
@@ -418,23 +422,23 @@ body::-webkit-scrollbar-thumb {
 }
 
 .pio-container.left .pio-dialog {
-  left: 1em
+  left: 1em;
 }
 
 .pio-container.right .pio-dialog {
-  right: 1em
+  right: 1em;
 }
 
 #pio {
-  vertical-align: middle
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 768px) {
   #pio {
-    width: 8em
+    width: 8em;
   }
 
   .pio-container {
-    pointer-events: none
+    pointer-events: none;
   }
 }
