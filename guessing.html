@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <title>猜数字</title>
 
@@ -16,7 +16,7 @@
         min-width: 480px;
         margin: 0 auto;
       }
-      
+
       .form input[type="number"] {
         width: 200px;
       }
@@ -26,17 +26,35 @@
         padding: 3px;
       }
     </style>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?e0a1048b7b0e93e7ecd0a7f9a1a81083";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
   </head>
 
   <body>
     <h1>猜数游戏</h1>
 
-    <p>我们在1到100之间选择了一个随机数。看看你能否在10次或更少的次数内猜出答案。我们会告诉你你的猜测是过高还是过低。</p>
+    <p>
+      我们在1到100之间选择了一个随机数。看看你能否在10次或更少的次数内猜出答案。我们会告诉你你的猜测是过高还是过低。
+    </p>
 
     <div class="form">
       <label for="guessField">输入一个数: </label>
-      <input type="number" min="1" max="100" required id="guessField" class="guessField">
-      <input type="submit" value="开始" class="guessSubmit">
+      <input
+        type="number"
+        min="1"
+        max="100"
+        required
+        id="guessField"
+        class="guessField"
+      />
+      <input type="submit" value="开始" class="guessSubmit" />
     </div>
 
     <div class="resultParas">
@@ -47,70 +65,70 @@
 
     <script>
       let randomNumber = Math.floor(Math.random() * 100) + 1;
-      const guesses = document.querySelector('.guesses');
-      const lastResult = document.querySelector('.lastResult');
-      const lowOrHi = document.querySelector('.lowOrHi');
-      const guessSubmit = document.querySelector('.guessSubmit');
-      const guessField = document.querySelector('.guessField');
+      const guesses = document.querySelector(".guesses");
+      const lastResult = document.querySelector(".lastResult");
+      const lowOrHi = document.querySelector(".lowOrHi");
+      const guessSubmit = document.querySelector(".guessSubmit");
+      const guessField = document.querySelector(".guessField");
       let guessCount = 1;
       let resetButton;
 
       function checkGuess() {
         const userGuess = Number(guessField.value);
         if (guessCount === 1) {
-          guesses.textContent = '先前的猜测: ';
+          guesses.textContent = "先前的猜测: ";
         }
 
-        guesses.textContent += userGuess + ' ';
+        guesses.textContent += userGuess + " ";
 
         if (userGuess === randomNumber) {
-          lastResult.textContent = '你猜对了!';
-          lastResult.style.backgroundColor = 'green';
-          lowOrHi.textContent = '';
+          lastResult.textContent = "你猜对了!";
+          lastResult.style.backgroundColor = "green";
+          lowOrHi.textContent = "";
           setGameOver();
         } else if (guessCount === 10) {
-          lastResult.textContent = '!!!游戏结束!!!';
-          lowOrHi.textContent = '';
+          lastResult.textContent = "!!!游戏结束!!!";
+          lowOrHi.textContent = "";
           setGameOver();
         } else {
-          lastResult.textContent = '错了!';
-          lastResult.style.backgroundColor = 'red';
-          if(userGuess < randomNumber) {
-            lowOrHi.textContent = '太小了!' ;
-          } else if(userGuess > randomNumber) {
-            lowOrHi.textContent = '太大了!';
+          lastResult.textContent = "错了!";
+          lastResult.style.backgroundColor = "red";
+          if (userGuess < randomNumber) {
+            lowOrHi.textContent = "太小了!";
+          } else if (userGuess > randomNumber) {
+            lowOrHi.textContent = "太大了!";
           }
         }
 
         guessCount++;
-        guessField.value = '';
+        guessField.value = "";
         guessField.focus();
       }
 
-      guessSubmit.addEventListener('click', checkGuess);
+      guessSubmit.addEventListener("click", checkGuess);
 
       function setGameOver() {
         guessField.disabled = true;
         guessSubmit.disabled = true;
-        resetButton = document.createElement('button');
-        resetButton.textContent = '再来一次';
+        resetButton = document.createElement("button");
+        resetButton.textContent = "再来一次";
         document.body.appendChild(resetButton);
-        resetButton.addEventListener('click', resetGame);
+        resetButton.addEventListener("click", resetGame);
       }
 
       function resetGame() {
         guessCount = 1;
-        const resetParas = document.querySelectorAll('.resultParas p');
+        const resetParas = document.querySelectorAll(".resultParas p");
         for (const resetPara of resetParas) {
-          resetPara.textContent = '';
+          resetPara.textContent = "";
         }
 
         resetButton.parentNode.removeChild(resetButton);
         guessField.disabled = false;
         guessSubmit.disabled = false;
-        guessField.value = '';
+        guessField.value = "";
         guessField.focus();
-        lastResult.style.backgroundColor = 'white';
+        lastResult.style.backgroundColor = "white";
         randomNumber = Math.floor(Math.random() * 100) + 1;
       }
     </script>
